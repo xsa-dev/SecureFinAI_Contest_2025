@@ -63,7 +63,7 @@ This task is to fine-tune LLMs and develop financial agents to interpret the pro
 Contact email: [finrlcontest@gmail.com](mailto:finrlcontest@gmail.com)
 
 Contestants can communicate any questions on 
-* [Discord](https://discord.gg/RNYsEwcXVj).
+* [Discord](https://discord.gg/dJY5cKzmkv).
 
 
 
