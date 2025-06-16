@@ -34,8 +34,8 @@ This task is to develop crypto trading agents by integrating LLM-generated signa
 ### Task II:
 This task is to fine-tune LLMs and develop financial agents to interpret the professional language of finance. Participants are expected to train or fine-tune their LLMs to perform tasks in the three domains: the CDM, the MOF, and XBRL. We encourage participants to use LoRA and reinforcement fine-tuning.
 * **CFA exam**: The CFA (Chartered Financial Analyst) exam is a globally recognized exam for financial analysts. It covers a wide range of financial topics, such as investment, economics, and quantitative methods.
+* **BloombergGPT** [6]: Compare the performance of your model with BloombergGPT on its public financial benchmarks.
 * **XBRL**: XBRL (eXtensible Business Reporting Language) is a standard language for electronic communication of business and financial data. It has been widely used in regulatory filings, such as SEC filings.
-* **CDM**: CDM (Common Domain Model) is a machine-oriented model for managing the lifecycle of financial products and transactions.
 
 **Datasets**
 
@@ -55,7 +55,9 @@ This task is to fine-tune LLMs and develop financial agents to interpret the pro
 <p style="font-size: 10px;">
 [5] Shijie Han, Haoqiang Kang, Bo Jin, Xiao-Yang Liu, Steve Yang. XBRL Agent: Leveraging Large Language Models for Financial Report Analysis. ACM International Conference on AI in Finance, 2024.
 </p>
-
+<p style="font-size: 10px;">
+[6] Shijie Wu, Ozan Irsoy, Steven Lu, Vadim Dabravolski, Mark Dredze, Sebastian Gehrmann, Prabhanjan Kambadur, David Rosenberg, Gideon Mann. BloombergGPT: A Large Language Model for Finance. arXiv: 2303.17564 (2023).
+</p>
 
 ## Contact
 Contact email: [finrlcontest@gmail.com](mailto:finrlcontest@gmail.com)

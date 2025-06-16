@@ -6,6 +6,18 @@ weight: 2
 ---
 
 ## Timeline
+* **Team Registration Begin**:
+* **Starter-Kit Release**: 
+* **Paper Submission Deadline**: Aug 1, 2025
+* **Paper Notification**: Sept 1, 2025
+* **Paper Cemera Ready**: Oct 1, 2025
+* **Solution Submission Deadline**: Sept 15, 2025
+* **Winner Notification**: Oct 15, 2025
+* **Winner Announcement**: Nov 7-9, IEEE CS Cloud Conference
+
+<span style="color:blue;">(All deadlines are at 11:59pm EST on the specified date.)</span>
+
+Winners will be invited to attend the conference and have the opportunity to present their work and poster at the conference.
 
 ## Registration
 Team registration is done through the [form](). Please ensure that all team members provide their full names, emails, institutions, and the team name. We encourage you to use your institutional email to register.
