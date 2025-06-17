@@ -3,13 +3,14 @@ This repository contains the starter kit and tutorials for the FinAI Contest 202
 
 ## Outline
   - [Tutorial](#tutorial)
-  - [Task 1](#task-1)
-  - [Task 2](#task-2)
+  - [Task 1 FinRL DeepSeek for Crypto Trading](#task-1-finrl-deepseek-for-crypto-trading)
+  - [Task 2 FinAgents in Real Life](#task-2-finagents-in-real-life)
+  - [Task 3 DeFi Liquidity Provisioning](#task-2-defi-liquidity-provisioning)
   - [Report Submission Requirement](#report-submission-requirement)
   - [Resources](#resources)
 
 ## Tutorial
-Please explore [FinAI Contest Documentation](https://finrl-contest.readthedocs.io/en/latest/) for task 1 and 2, 
+Please explore [FinAI Contest Documentation](https://finrl-contest.readthedocs.io/en/latest/) for task 1, 2 and 3. 
 
 We also welcome questions for these documentations and will update in their FAQs.
 
@@ -25,11 +26,12 @@ Here we also provide some demos for FinRL:
 | Sentiment Analysis with Market Feedback | ChatGLM2-6B | -- | Eastmoney News | [Code](https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/FinGPT_Sentiment_Analysis_v1/FinGPT_v1.0) |
 | Stock Price Prediction | Linear Regression | -- | OHLCV | [Demo](https://github.com/Open-Finance-Lab/FinAI_Contest_2025/blob/main/Tutorials/Example_Linear_Regression.ipynb) |
 
-## Task 1 
+## Task 1 FinRL-DeepSeek for Crypto Trading
 
 
-## Task 2 
+## Task 2 FinAgents in Real Life
 
+## Task 3 DeFi Liquidity Provisioning
 
 
 ## Resources
