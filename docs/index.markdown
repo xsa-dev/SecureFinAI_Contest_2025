@@ -24,20 +24,22 @@ We design two tasks: (1) FinRL-DeepSeek for Crypto Trading and (2) FinAgent usin
 ## Tasks
 Each team can choose to participate in one or more tasks. The prizes will be awarded for each task.
 
-### Task I: 
+### Task I FinRL-DeepSeek for Crypto Trading:
 This task is to develop crypto trading agents by integrating LLM-generated signals in FinRL, using financial news and market data. Participants can build upon the FinRL-DeepSeek project (e.g., with new prompts, new ways to inject LLM-processed news signals into the RL agent, new RL algorithms like GRPO) or explore more computationally intensive directions, such as adapting variants of the DeepSeek R1 training method to this crypto trading task.
 
 **Datasets**
 
 
 
-### Task II:
+### Task II FinAgents in Real Life:
 This task is to fine-tune LLMs and develop financial agents to interpret the professional language of finance. Participants are expected to train or fine-tune their LLMs to perform tasks in the three domains: the CDM, the MOF, and XBRL. We encourage participants to use LoRA and reinforcement fine-tuning.
 * **CFA exam**: The CFA (Chartered Financial Analyst) exam is a globally recognized exam for financial analysts. It covers a wide range of financial topics, such as investment, economics, and quantitative methods.
 * **BloombergGPT** [6]: Compare the performance of your model with BloombergGPT on its public financial benchmarks.
 * **XBRL**: XBRL (eXtensible Business Reporting Language) is a standard language for electronic communication of business and financial data. It has been widely used in regulatory filings, such as SEC filings.
 
 **Datasets**
+
+### Task III DeFi Liquidity Provisioning:
 
 
 <p style="font-size: 10px;">
