@@ -41,6 +41,9 @@ This task is to fine-tune LLMs and develop financial agents to interpret the pro
 **Datasets**
 
 ### Task III DeFi Liquidity Provisioning:
+The task is to develop RL agents for decentralized liquidity provisioning on Uniswap v3. The agent simulates a Liquidity Provider (LP) who must decide, at each time step, whether to maintain or rebalance their liquidity position. 
+
+**Datasets**
 
 
 <p style="font-size: 10px;">
