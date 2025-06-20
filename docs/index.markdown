@@ -10,6 +10,7 @@ weight: 1
   <img style="width: 20%;" src="https://github.com/Open-Finance-Lab/FinRL_Contest_2025/blob/main/docs/assets/logos/columbiau.jpeg?raw=true" alt="Columbia Logo">
 </div>
 
+### Thanks to the AI4Finance Foundation Open-Source Community support.
 
 ## Introduction
 
