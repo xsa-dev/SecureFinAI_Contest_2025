@@ -4,8 +4,8 @@ This repository contains the starter kit and tutorials for the FinAI Contest 202
 ## Outline
   - [Tutorial](#tutorial)
   - [Task 1 FinRL DeepSeek for Crypto Trading](#task-1-finrl-deepseek-for-crypto-trading)
-  - [Task 2 FinAgents in Real Life](#task-2-finagents-in-real-life)
-  - [Task 3 DeFi Liquidity Provisioning](#task-2-defi-liquidity-provisioning)
+  - [Task 2 FinGPT Agents in Real Life](#task-2-fingpt-agents-in-real-life)
+  - [Task 3 FinRL for DeFi](#task-2-finrl-for-defi)
   - [Report Submission Requirement](#report-submission-requirement)
   - [Resources](#resources)
 
@@ -29,9 +29,9 @@ Here we also provide some demos for FinRL:
 ## Task 1 FinRL-DeepSeek for Crypto Trading
 
 
-## Task 2 FinAgents in Real Life
+## Task 2 FinGPT Agents in Real Life
 
-## Task 3 DeFi Liquidity Provisioning
+## Task 3 FinRL for DeFi
 
 
 ## Resources
