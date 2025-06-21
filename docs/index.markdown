@@ -10,11 +10,11 @@ weight: 1
   <img style="width: 20%;" src="https://github.com/Open-Finance-Lab/FinRL_Contest_2025/blob/main/docs/assets/logos/columbiau.jpeg?raw=true" alt="Columbia Logo">
 </div>
 
-### Thanks to the AI4Finance Foundation Open-Source Community support.
+### Thanks to the AI4Finance Foundation open source community for their support.
 
 ## Introduction
 
-As artificial intelligence (AI) continues to advance rapidly, more and more AI agents are being developed and applied to various financial tasks, such as trading agents [1,2,3], search agents [4], and regulatory reporting agents [5]. The FinAI Contest 2025 aims to encourage the development of advanced financial agents through FinRL and LLM fine-tuning, and benchmark their performance across different financial tasks.
+As artificial intelligence (AI) continues to advance rapidly, more and more AI agents are being developed and applied to various financial tasks, such as trading agents [1,2,3], search agents [4], and regulatory reporting agents [5]. The FinAI Contest 2025 aims to encourage the development of advanced financial agents through [financial reinforcement learning (FinRL)](https://berylventures.com/spotlights) and LLM fine-tuning, and benchmark their performance across different financial tasks.
 
 The FinAI Contest 2025 explores and evaluates the capability of machine learning methods in finance, with the following features:
 1. **FinRL-DeepSeek**. Generating alpha signals is crucial for making informed trading decisions. As individual investors without resources, what if we can ask Warren Buffett for value-investing advice, consult a risk manager to identify red flags in SEC filings, or engage a sentiment analyst to interpret the tone of market news — all timely and on demand. AI agents make this possible. These LLM-powered agents, such as a Warren Buffett agent, a sentiment analysis agent, and a risk management agent, form a professional investment team to extract actionable signals from financial documents. In this contest, we encourage participants to explore LLM-generated signals and integrate them into FinRL for crypto trading.
@@ -30,7 +30,7 @@ Each team can choose to participate in one or more tasks. The prizes will be awa
 This task is to develop crypto trading agents by integrating LLM-generated signals in FinRL, using financial news and market data. Participants can build upon the FinRL-DeepSeek project (e.g., with new prompts, new ways to inject LLM-processed news signals into the RL agent, new RL algorithms like GRPO) or explore more computationally intensive directions, such as adapting variants of the DeepSeek R1 training method to this crypto trading task.
 
 **Datasets**
-
+We will provide the hourly-level OHLCV data and financial news for Bitcoin. Participants are permitted to use additional external datasets.
 
 
 ### Task II FinGPT Agents in Real Life:
@@ -40,11 +40,14 @@ This task is to fine-tune LLMs and develop financial agents to interpret the pro
 * **XBRL**: XBRL (eXtensible Business Reporting Language) is a standard language for electronic communication of business and financial data. It has been widely used in regulatory filings, such as SEC filings.
 
 **Datasets**
+We will provide the data sources for the three domains so that participants can collect data themselves. Participants can collect these data to fine-tune their LLMs and develop their agents. The full question sets for evaluation will be released during the evaluation period.
+
 
 ### Task III FinRL for DeFi:
 The task is to develop RL agents for decentralized liquidity provisioning on Uniswap v3. The agent simulates a Liquidity Provider (LP) who must decide, at each time step, whether to maintain or rebalance their liquidity position. 
 
 **Datasets**
+We will provide hourly data for the WETH/USDC Uniswap v3 pool (0.05% fee tier), covering the period from May 5, 2021 at 1:00 am to 29 January 2024 at 7:00 pm. The dataset is sourced from the Uniswap Ethereum subgraph and resampled into an evenly spaced hourly series.
 
 
 <p style="font-size: 10px;">
