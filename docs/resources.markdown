@@ -10,16 +10,17 @@ weight: 4
 </div>
 We presented FinRL, FinRL-DeepSeek, and FinRL Contest 2025 with Paris Machine Learning Group. Watch the video [here](https://youtu.be/tvaNIU91rNc?si=IDnmGG1tXVrBZsM6).
 
-# FinRL Blog
-New to FinRL? Start your journey by reading our [blog](https://berylventures.com/spotlights) that introduces financial reinforcement learning.
+# FinRL Trading Agents Blog
+New to FinRL? Start your journey by reading our [blog](https://berylventures.com/spotlights) about FinRL trading agents.
 
 # FinRL Contests
 
-**FinRL Contest 2023**: [Contest Website](https://open-finance-lab.github.io/finrl-contest.github.io/); [Github](https://github.com/Open-Finance-Lab/FinRL_Contest_2023)
+**FinRL Contest 2025**: [Contest Website](https://open-finance-lab.github.io/FinRL_Contest_2025/); [Github](https://github.com/Open-Finance-Lab/FinRL_Contest_2025)
 
 **FinRL Contest 2024**: [Contest Website](https://open-finance-lab.github.io/finrl-contest-2024.github.io/); [Github](https://github.com/Open-Finance-Lab/FinRL_Contest_2024)
 
-**FinRL Contest 2025**: [Contest Website](https://open-finance-lab.github.io/FinRL_Contest_2025/); [Github](https://github.com/Open-Finance-Lab/FinRL_Contest_2025)
+**FinRL Contest 2023**: [Contest Website](https://open-finance-lab.github.io/finrl-contest.github.io/); [Github](https://github.com/Open-Finance-Lab/FinRL_Contest_2023)
+
 
 # FinAI Contest Documentation
 Feel free to explore [FinAI Contest Documentation](https://finrl-contest.readthedocs.io/en/latest/) to learn about FinAI Contest tasks.
