@@ -14,14 +14,14 @@ weight: 1
 
 ## Introduction
 
-As artificial intelligence (AI) continues to advance rapidly, more and more AI agents are being developed and applied to various financial tasks, such as trading agents [1,2,3], search agents [4], and regulatory reporting agents [5]. The FinAI Contest 2025 aims to encourage the development of advanced financial agents and benchmark their performance across different financial tasks.
+As artificial intelligence (AI) continues to advance rapidly, more and more AI agents are being developed and applied to various financial tasks, such as trading agents [1,2,3], search agents [4], and regulatory reporting agents [5]. The FinAI Contest 2025 aims to encourage the development of advanced financial agents through FinRL and LLM fine-tuning, and benchmark their performance across different financial tasks.
 
-The FinRL Contest 2025 explores and evaluates the capability of machine learning methods in finance, with the following features:
+The FinAI Contest 2025 explores and evaluates the capability of machine learning methods in finance, with the following features:
 1. **FinRL-DeepSeek**. Generating alpha signals is crucial for making informed trading decisions. As individual investors without resources, what if we can ask Warren Buffett for value-investing advice, consult a risk manager to identify red flags in SEC filings, or engage a sentiment analyst to interpret the tone of market news — all timely and on demand. AI agents make this possible. These LLM-powered agents, such as a Warren Buffett agent, a sentiment analysis agent, and a risk management agent, form a professional investment team to extract actionable signals from financial documents. In this contest, we encourage participants to explore LLM-generated signals and integrate them into FinRL for crypto trading.
 2. **FinGPT Agents**. AI agents have seen rapid development and have been applied to various financial tasks recently. However, can they truly serve as professional financial assistants in real life? Imagine an AI agent that can help us prepare for CFA exams, analyze the SEC filings, or navigate financial contracts. Despite this promise, there still remain [doubts that AI cannot perform financial analytics](https://www.cnbc.com/2023/12/19/gpt-and-other-ai-models-cant-analyze-an-sec-filing-researchers-find.html). This task encourages participants to take on that challenge: fine-tune LLMs and develop financial agents for financial analytics, including the CFA exam, BloombergGPT's public benchmarks, and XBRL.
 3. **FinRL for Decentralized Finance (DeFi)**.  DeFi is reshaping the crypto economy by enabling peer-to-peer trading, lending, and liquidity provision, without banks, brokers, or intermediaries. As a core component of DeFi, the automated market makers (AMMs) act as liquidity providers (LPs) and replace order books with liquidity pools. However, liquidity provision is complex and risky. For example, impermanent loss can occur for LPs when the price of assets in a liquidity pool diverges from their initial value. LPs must actively manage price ranges, balance transaction fees, and mitigate impermanent loss. How can we develop an intelligent LP that adapts to market dynamics in DeFi? In this contest, we challenge participants to develop reinforcement learning agents that act as LPs [7], dynamically adjusting their liquidity positions in response to market conditions. 
 
-We design two tasks: (1) FinRL-DeepSeek for Crypto Trading and (2) FinAgent using Fine-Tuning. These challenges allow contestants to participate in various financial tasks and contribute to open finance using state-of-the-art technologies. We welcome students, researchers, and engineers who are passionate about finance and machine learning to partake in the contest.
+We design three tasks: We design three tasks: (1) FinRL-DeepSeek for Crypto Trading, (2) FinGPT Agents in Real Life, and (3) FinRL for DeFi. These challenges allow contestants to participate in various financial tasks and contribute to open finance using state-of-the-art technologies. We welcome students, researchers, and engineers who are passionate about finance and machine learning to partake in the contest.
 
 ## Tasks
 Each team can choose to participate in one or more tasks. The prizes will be awarded for each task.
@@ -48,10 +48,11 @@ The task is to develop RL agents for decentralized liquidity provisioning on Uni
 
 
 <p style="font-size: 10px;">
-[1] X.-Y. Liu, Z. Xia, H. Yang, J. Gao, D. Zha, M. Zhu, Christina D. Wang*, Zhaoran Wang, and Jian Guo. Dynamic datasets and market environments for financial reinforcement learning. Machine Learning Journal, Springer Nature, 2023.
+[1] Xiao-Yang Liu, Hongyang Yang, Jiechao Gao, and Christina Dan Wang. FinRL: Deep rein-
+forcement learning framework to automate trading in quantitative finance. In Proceedings of the second ACM international conference on AI in finance, pages 1–9, 2021.
 </p>
 <p style="font-size: 10px;">
-[2] X.-Y. Liu, Z. Xia, J. Rui, J. Gao, H. Yang, M. Zhu, C. Wang, Z. Wang, J. Guo. FinRL-Meta: Market environments and benchmarks for data-driven financial reinforcement learning. NeurIPS, Special Track on Datasets and Benchmarks, 2022.
+[2] Xiao-Yang Liu, Hongyang Yang, Qian Chen, Runjia Zhang, Liuqing Yang, Bowen Xiao, and Christina Dan Wang. FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance. Deep Reinforcement Leanring Workshop, NeurIPS. 2020
 </p>
 <p style="font-size: 10px;">
 [3] Keyi Wang, Nikolaus Holzer, Ziyi Xia, Yupeng Cao, Jiechao Gao, Anwar Walid, Kairong Xiao, and Xiao-Yang Liu Yanglet. Parallel Market Environments for FinRL Contests. arXiv: 2504.02281 (2025).
