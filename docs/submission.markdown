@@ -18,7 +18,7 @@ Participants need to submit a Hugging Face link containing
 * the model that can be easily loaded,
 * scripts that load and inference with the model (including code for calling external tools).
 
-#### **Task III FinRL for DeFi**
+#### **Task III FinRL-DeFi**
 Participants need to submit a well-organized GitHub repository containing
 * complete code for training and inference (scripts, classes, and configurations)
 * trained model weights
@@ -45,7 +45,7 @@ The performance of the model will be assessed using the following metrics:
 #### **Task II FinGPT Agents in Real Life**
 The final score of the model is the average score of all tasks. The metrics are specified in the starter kit.
 
-#### **Task III FinRL for DeFi**
+#### **Task III FinRL-DeFi**
 TBA.
 
 ### **Paper Assessment**:
