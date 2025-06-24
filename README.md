@@ -5,7 +5,7 @@ This repository contains the starter kit and tutorials for the FinAI Contest 202
   - [Tutorial](#tutorial)
   - [Task 1 FinRL DeepSeek for Crypto Trading](#task-1-finrl-deepseek-for-crypto-trading)
   - [Task 2 FinGPT Agents in Real Life](#task-2-fingpt-agents-in-real-life)
-  - [Task 3 FinRL for DeFi](#task-2-finrl-for-defi)
+  - [Task 3 FinRL-DeFi](#task-2-finrl-defi)
   - [Paper Submission Requirement](#paper-submission-requirement)
   - [Resources](#resources)
 
@@ -31,7 +31,7 @@ Here we also provide some demos for FinRL:
 
 ## Task 2 FinGPT Agents in Real Life
 
-## Task 3 FinRL for DeFi
+## Task 3 FinRL-DeFi
 
 ## Paper Submission Requirements
 Each team should submit short papers with 3 complimentary pages and up to 2 extra pages, including all figures, tables, and references. The paper submission is through [the special track]() and should follow its instructions. Please include “RLSolver Contest Task 1/2” in your abstract.
