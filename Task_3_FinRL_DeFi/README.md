@@ -110,3 +110,34 @@ Participants are encouraged to extend the **state (feature) space**, including i
 
 Agents may only use information available at the current or past timesteps.  
 **Future information from the test set is strictly prohibited.**
+
+
+## Repository Structure and Usage
+
+The starter kit is organized into the following components:
+
+```
+.
+├── config/                    # YAML files to control hyperparameters and environment settings
+├── custom_env_folder/        # Contains the UniswapV3 RL environment (compatible with Gymnasium)
+├── data_price_uni_h_time.csv # Hourly WETH/USDC Uniswap v3 data (used by both training and evaluation scripts)
+├── requirements.txt          # List of required Python packages
+├── uniswap_test.py           # Main training script using PPO and the custom environment
+├── uniswap_test_bm.ipynb     # Notebook running the passive LP baseline for comparison
+```
+
+- **Training a Custom Agent**: Use `uniswap_test.py` to train agents in the provided environment. This script leverages the custom Gym-compatible environment found in `custom_env_folder/`.
+
+- **Configuration Management**: The `config/` folder contains YAML files to specify:
+  - PPO hyperparameters (e.g., learning rate, discount factor)
+  - Design choices (e.g., action space, environment parameters)
+
+- **Baseline Comparison**: The notebook `uniswap_test_bm.ipynb` runs a passive liquidity provisioning strategy that rebalances at fixed time intervals. It serves as the benchmark to beat.
+
+- **Dataset**: The file `data_price_uni_h_time.csv` contains the hourly price series for the ETH/USDC pool on Uniswap v3. This is the only market data used in the baseline.
+
+- **Dependencies**: You can install the required packages using:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
