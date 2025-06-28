@@ -28,7 +28,7 @@ Participants need to submit a well-organized GitHub repository containing
 
 
 ### **Paper Submission Requirements**:
-Each team should submit short papers with 3 complimentary pages and up to 2 extra pages, including all figures, tables, and references. The paper submission is through [the special track]() and should follow its instructions. Please include “FinAI Contest 2025 Task 1/2/3” in your abstract.
+Each team should submit short papers with 3 complimentary pages and up to 2 extra pages, including all figures, tables, and references. The paper submission is through [the special track: SecureFinAI](https://www.cloud-conf.net/cscloud/2025/cscloud/cfp_files/SecureFinAI_CFP.pdf) and should follow its instructions. Please include “FinAI Contest 2025 Task 1/2/3” in your abstract.
 
 ## Evaluation
 For each task, the final ranking of participants will be determined by a weighted combination of model evaluation and paper assessment, with weights of 60% and 40% respectively.
