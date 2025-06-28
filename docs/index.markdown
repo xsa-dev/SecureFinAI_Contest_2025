@@ -33,7 +33,7 @@ Each team can choose to participate in one or more tasks. The prizes will be awa
 This task is to develop crypto trading agents by integrating LLM-generated signals in FinRL, using financial news and market data. Participants can build upon the FinRL-DeepSeek project (e.g., with new prompts, new ways to inject LLM-processed news signals into the RL agent, new RL algorithms like GRPO) or explore more computationally intensive directions, such as adapting variants of the DeepSeek R1 training method to this crypto trading task.
 
 **Datasets**
-We will provide the hourly-level OHLCV data and financial news for Bitcoin. Participants are permitted to use additional external datasets.
+We will provide the second-level LOB data and financial news for Bitcoin. Participants are permitted to use additional external datasets.
 
 
 ### Task II FinGPT Agents in Real Life:
