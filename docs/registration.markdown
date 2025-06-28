@@ -7,6 +7,8 @@ weight: 2
 
 ## Timeline
 * **Team Registration Begin**: June 27, 2025
+
+  <span style="color:blue;">Register your team here: https://forms.gle/1MwG2LVZMHsuQ7We99</span>
 * **Starter-Kit Release**: July 1, 2025
 * **Paper Submission Deadline**: Aug 1, 2025
 * **Paper Notification**: Sept 1, 2025
