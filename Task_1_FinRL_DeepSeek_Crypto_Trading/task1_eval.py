@@ -120,7 +120,9 @@ class EnsembleEvaluator:
             current_btcs.append(self.current_btc)
 
         # Save results
-        np.save(f"{self.save_path}_positions.npy", positions)
+        positions_np = np.array([p.cpu().numpy() if isinstance(p, torch.Tensor) else p for p in positions])
+        np.save(f"{self.save_path}_positions.npy", positions_np)
+        #np.save(f"{self.save_path}_positions.npy", positions)
         np.save(f"{self.save_path}_net_assets.npy", np.array(self.net_assets))
         np.save(f"{self.save_path}_btc_positions.npy", np.array(self.btc_assets))
         np.save(f"{self.save_path}_correct_predictions.npy", np.array(correct_pred))
