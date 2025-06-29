@@ -1,4 +1,4 @@
-## # FinAI Contest Task 12 - FinGPT Agents in Real Life
+## FinAI Contest Task 12 - FinGPT Agents in Real Life
 
 ### 🧠 Task Overview
 
