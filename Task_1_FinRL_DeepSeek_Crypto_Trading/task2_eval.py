@@ -25,7 +25,7 @@ class EnsembleEvaluator:
         self.agents = []
         self.thresh = 0.001
         self.num_envs = 1
-        self.state_dim = 8 + 2
+        self.state_dim = 2 + 8 + 2
         self.device = torch.device(f"cuda" if torch.cuda.is_available() else "cpu")
 
         self.trade_env = build_env(args.env_class, args.env_args, gpu_id=args.gpu_id)
@@ -159,7 +159,7 @@ def run_evaluation(save_path, agent_list):
         "env_name": "TradeSimulator-v0",
         "num_envs": num_sims,
         "max_step": max_step,
-        "state_dim": 8 + 2,
+        "state_dim": 2 + 8 + 2,
         "action_dim": 3,
         "if_discrete": True,
         "max_position": max_position,

@@ -40,15 +40,21 @@ class TradeSimulator:
         self.price_ary[:, 0] = self.price_ary[:, 2] * (1 + self.price_ary[:, 0])
         self.price_ary[:, 1] = self.price_ary[:, 2] * (1 + self.price_ary[:, 1])
 
+        self.llm_signals = data_df[["sentiment_score", "risk_score"]].values
+        
+
         """Align with the rear of the dataset instead"""
         # self.price_ary = self.price_ary[: self.factor_ary.shape[0], :]
         self.price_ary = self.price_ary[-self.factor_ary.shape[0] :, :]
+        self.llm_signals = self.llm_signals[-self.factor_ary.shape[0] :, :]
 
-        self.price_ary = th.tensor(self.price_ary, dtype=th.float32)  # CPU
+        self.price_ary = th.tensor(self.price_ary, dtype=th.float32)  # CPU        
+        self.llm_signals = th.tensor(self.llm_signals, dtype=th.float32) #CPU
 
         self.seq_len = 3600
         self.full_seq_len = self.price_ary.shape[0]
         assert self.price_ary.shape[0] == self.factor_ary.shape[0]
+        assert self.llm_signals.shape[0] == self.factor_ary.shape[0]
 
         # reset()
         self.step_i = 0
@@ -65,7 +71,7 @@ class TradeSimulator:
 
         # environment information
         self.env_name = "TradeSimulator-v0"
-        self.state_dim = 8 + 2  # factor_dim + (position, holding)
+        self.state_dim = 2 + 8 + 2 # (position, holding) + factor_dim +  DeepSeek engineered signals
         self.action_dim = 3  # short, nothing, long
         self.if_discrete = True
         self.max_step = (self.seq_len - num_ignore_step) // step_gap
@@ -208,6 +214,8 @@ class TradeSimulator:
 
     def get_state(self, step_is_cpu):
         factor_ary = self.factor_ary[step_is_cpu, :].to(self.device)
+        llm_signals = self.llm_signals[step_is_cpu, :].to(self.device)
+
 
         return th.concat(
             (
@@ -215,6 +223,7 @@ class TradeSimulator:
                 (self.holding.float() / self.max_holding)[:, None],
                 # (self.empty_count.float() / self.max_empty_count)[:, None],
                 factor_ary,
+                llm_signals,
             ),
             dim=1,
         )
