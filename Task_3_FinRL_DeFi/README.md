@@ -1,4 +1,4 @@
-# Task 3 — DeFi Liquidity Provisioning
+# Task 3 — FinRL-DeFi
 
 ## Objective of the Task
 
