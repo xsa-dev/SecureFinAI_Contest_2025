@@ -83,7 +83,7 @@ def train_model(gpu_id: int):
 
     '''data'''
     args = ConfigData()
-    seq_data = SeqData(args=args, train_ratio=0.8)
+    seq_data = SeqData(args=args, train_ratio=0.6)
     input_dim = seq_data.input_dim
     label_dim = seq_data.label_dim
 

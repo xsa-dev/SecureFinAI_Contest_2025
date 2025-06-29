@@ -481,7 +481,7 @@ def run():
         "env_name": "TradeSimulator-v0",
         "num_envs": num_sims,
         "max_step": max_step,
-        "state_dim": 8 + 2,  # factor_dim + (position, holding)
+        "state_dim": 2 + 8 + 2,  # (position, holding) + factor_dim + DeepSeek engineered signals
         "action_dim": 3,  # long, 0, short
         "if_discrete": True,
         "max_position": max_position,
