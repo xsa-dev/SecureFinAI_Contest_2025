@@ -168,7 +168,7 @@ def run_evaluation(save_path, agent_list):
         "slippage": slippage,
         "num_sims": num_sims,
         "step_gap": step_gap,
-        "dataset_path": "path_to_evaluation_dataset",  # Replace with your evaluation dataset path
+        "dataset_path": "./data/BTC_1sec_with_sentiment_risk_test.csv",  # Replace with your evaluation dataset path
     }
     args = Config(agent_class=None, env_class=EvalTradeSimulator, env_args=env_args)
     args.gpu_id = gpu_id

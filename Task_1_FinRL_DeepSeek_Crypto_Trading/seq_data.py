@@ -308,8 +308,8 @@ class TechIndicator:
         self.num_asks = df["sells"]
         self.num_bids = df["buys"]
 
-        self.best_bid = self.vwap - df["bids_distance_3"]  # The best/highest bid price
-        self.best_ask = self.vwap + df["asks_distance_3"]  # The best/lowest ask price
+        self.best_bid = self.vwap *(1 + df["bids_distance_3"])  # The best/highest bid price
+        self.best_ask = self.vwap * (1 + df["asks_distance_3"])  # The best/lowest ask price
         self.mid_price = (self.best_bid + self.best_ask) / 2
         self.bid_volume = df["bids_notional_3"]  # The best/highest bid volume
         self.ask_volume = df["asks_notional_3"]  # The best/lowest ask volume
