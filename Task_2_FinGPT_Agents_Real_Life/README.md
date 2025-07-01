@@ -29,9 +29,9 @@ Your primary goal is to fine-tune or train a language model for financial analyt
 
 ---
 
-### 📊 Question Dataset Overview
+### 📊 Question Set Overview
 
-This dataset contains question-answer pairs collected and organized for evaluating model capabilities across CFA exams, BloombergGPT benchmark tasks, and XBRL tasks. These question sets are sampled from the test split of the datasets, which are used to benchmark your agent's performance. You **SHOULD NOT** use it or the entire test split for fine-tuning or training.
+These question sets contain question-answer pairs collected and organized for evaluating model capabilities across CFA exams, BloombergGPT benchmark tasks, and XBRL tasks. These question sets are sampled from the test split of the datasets, which are used to benchmark your agent's performance. You **SHOULD NOT** use it or the entire test split for fine-tuning or training.
 
 #### CFA Exams
 | **Exam Level** | **# Exams** | **Questions/Exam** | **Total** | **Description** |
