@@ -2,15 +2,13 @@
 # FinAI Contest Task 1 - FinRL-DeepSeek for Crypto Trading
 This task is to develop crypto trading agents by integrating LLM-generated signals in FinRL, using financial news and market data. Participants can build upon the FinRL-DeepSeek project (e.g., with new prompts, new ways to inject LLM-processed news signals into the RL agent, new RL algorithms like GRPO) or explore more computationally intensive directions, such as adapting variants of the DeepSeek R1 training method to this crypto trading task.
 
-Participants are encouraged to explore a wide range of strategies for extracting actionable signals from financial news and limit order book (LOB) data. They may employ prompt engineering or advanced LLM-based pipelines to generate signals. External datasets are permitted and welcomed, offering the opportunity to integrate diverse signals such as macroeconomic indicators, crypto wallets activity, or alternative datasets. Partcipants can also experiment with the RNN-based feature engineering, different RL algorithms, and employ ensemble methods. Moreover, teams are encouraged to optimize GPU-accelerated environments.
+Participants are encouraged to explore a wide range of strategies for extracting actionable signals from financial news and limit order book (LOB) data. They may employ prompt engineering or advanced LLM-based pipelines to generate signals. External datasets are permitted and welcomed, offering the opportunity to integrate diverse signals such as macroeconomic indicators, crypto wallets activity, or alternative datasets. Participants can also experiment with the RNN-based feature engineering, different RL algorithms, and employ ensemble methods. Moreover, teams are encouraged to optimize GPU-accelerated environments.
 
-Participants also need to specify the state space, action space and reward function in the environment. The final model should be able to interact with the provided trading environment.
-
-There is an example of using feature engineering and ensemble method, [FinRL Contest 2025 Task 2 Crypto Trading Ensemble](). 
+Participants also need to specify the state space, action space, and reward function in the environment. The final model should be able to interact with the provided trading environment.
 
 ## Starter Kit Description
 
-This starter kit demonstrates how to use the provided code. We provide you with the LLM-engineered sentiment and risk scores and RNN-generated strong factors as a starting point, but you are strongly encouraged to develop your own factor mining approaches. You are welcome to experiment with various ensemble configurations that yield optimal results.
+This starter kit demonstrates how to use the provided code. We provide you with the LLM-engineered sentiment and risk scores and RNN-generated strong factors as a starting point. 
 
 ### LLM-engineered Signals from BTC news
 
