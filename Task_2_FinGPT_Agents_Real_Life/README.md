@@ -1,4 +1,4 @@
-## FinAI Contest Task 12 - FinGPT Agents in Real Life
+## FinAI Contest Task 2 - FinGPT Agents in Real Life
 
 ### 🧠 Task Overview
 
@@ -17,7 +17,7 @@ Your primary goal is to fine-tune or train a language model for financial analyt
    Participants need to collect raw data given the source provided below. 
 
 2. **Develop FinGPT Agents**  
-   Use your collected data to fine-tune your own LLM for financial analytics. You can use FinGPT framework to fine-tune your model. We encourage participants to use LoRA and reinforcement fine-tuning. You can also enhance your agent by integrating external tools, such as RAG.
+   Use your collected data to fine-tune your own LLM for financial analytics. You can use FinGPT framework to fine-tune your model. We encourage participants to use LoRA and reinforcement fine-tuning. You can also enhance your agent by integrating external tools, such as RAG. You can view [**FinLoRA documentation**](https://finlora-docs.readthedocs.io/en/latest/index.html) to learn more about LoRA and some financial tasks.
 
 3. **Submit Your Agent**  
    Submit your agent following the competition guidelines. Make sure your model is:
@@ -34,6 +34,25 @@ Your primary goal is to fine-tune or train a language model for financial analyt
 This dataset contains question-answer pairs collected and organized for evaluating model capabilities across CFA exams, BloombergGPT benchmark tasks, and XBRL tasks.
 
 #### CFA Exams
+| **Exam Level** | **# Exams** | **Questions/Exam** | **Total** | **Description** |
+|----------------|-------------|--------------------|-----------|-----------------|
+| Level I        | 3           | 180                | 540       | Level I has multiple-choice questions to test a candidate’s understanding of core concepts in finance, investment tools, and ethical and professional standards.|
+| Level II       | 2           | 88                 | 176       | Level II has multiple-choice questions with contextual scenario, emphasizing the application of concepts and analytical skills.|
+
+| **Topic**                 | **Level I** | **Level II** | **Total** |
+|---------------------------|-------------|--------------|-----------|
+| Ethics                    | 81          | 24           | 105       |
+| Quantitative Methods      | 43          | 12           | 55        |
+| Economics                 | 41          | 12           | 53        |
+| Financial Reporting       | 66          | 24           | 90        |
+| Corporate Issuers         | 41          | 12           | 53        |
+| Equity Investments        | 67          | 24           | 91        |
+| Fixed Income              | 65          | 24           | 89        |
+| Derivatives               | 43          | 12           | 55        |
+| Alternative Investments   | 36          | 12           | 48        |
+| Portfolio Management      | 57          | 20           | 77        |
+| **Total**                 | **540**     | **176**      | **716**   |
+
 
 #### BloombergGPT [1] Public Benchmark Datasets
 | **Dataset**                             | **Size** | **Metrics**       | **# of shots** | **Dataset Link**                                                                 | **Description** |
@@ -90,20 +109,13 @@ Note: We will additionally test on a subset of the FiNER-139 and FNXL datasets. 
 
 ---
 
-#### 📦 Dataset Summary
-
-| **Domain** | **Total QA Pairs** |
-|------------|--------------------|
-| CDM        |                 |
-| BloombergGPT  |                 |
-| XBRL       |                |
 
 ### 📊 Metrics
-The model evaluation is the average score of all tasks. 
+The model evaluation in each domain is the average score of all tasks. 
 
 #### 📘 Note for Participants
 
-Participants are encouraged to use the above sources as a starting point to construct their own training datasets. Your model's performance will strongly depend on the quality and comprehensiveness of your self-collected training data. These sources can help you build a rich and task-aligned dataset for model training, ensuring better performance on regulatory reasoning and question answering.
+Participants are encouraged to use the above sources as a starting point to construct their own training/fine-tuning datasets. Your model's performance will strongly depend on the quality and comprehensiveness of your self-collected training data. These sources can help you build a rich and task-aligned dataset for model training, ensuring better performance on regulatory reasoning and question answering.
 
 To ensure fair comparison and practical deployment, it is recommended that the model size should not exceed 8B parameters.
 
