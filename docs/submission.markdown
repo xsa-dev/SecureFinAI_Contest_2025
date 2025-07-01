@@ -43,10 +43,20 @@ The performance of the model will be assessed using the following metrics:
 <span style="color:blue;">The final model ranking will be based solely on the **Sharpe Ratio**.</span>
 
 #### **Task II FinGPT Agents in Real Life**
-The final score of the model is the average score of all tasks. The metrics are specified in the starter kit.
+The score of the model is the average score of all tasks in that domain. The metrics are specified in the starter kit.
 
 #### **Task III FinRL-DeFi**
-TBA.
+The main metric is the **cumulative reward**, computed at each time step as:
+<p align="center"><strong>Reward = Trading Fees − LVR Penalty − Gas Cost</strong></p>
+
+Where:
+
+* Trading Fees are collected when swaps occur within the active price range.
+* LVR Penalty (Loss-Versus-Rebalancing) represents the opportunity cost of capital locked in the AMM compared to alternative uses.
+* Gas Cost is incurred when rebalancing the liquidity position.
+
+
+
 
 ### **Paper Assessment**:
 The assessment of the paper will be conducted by invited experts and professionals. The judges will independently rate the data and model analysis, robustness and generalizability, innovation and creativity, organization and readability, each accounting for 20% of the qualitative assessment. 
