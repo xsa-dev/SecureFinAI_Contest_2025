@@ -31,7 +31,7 @@ Your primary goal is to fine-tune or train a language model for financial analyt
 
 ### 📊 Question Dataset Overview
 
-This dataset contains question-answer pairs collected and organized for evaluating model capabilities across CFA exams, BloombergGPT benchmark tasks, and XBRL tasks. These question sets are used to benchmark your agent's performance. You should NOT use it for fine-tuning or training.
+This dataset contains question-answer pairs collected and organized for evaluating model capabilities across CFA exams, BloombergGPT benchmark tasks, and XBRL tasks. These question sets are sampled from the test split of the datasets, which are used to benchmark your agent's performance. You **SHOULD NOT** use it or the entire test split for fine-tuning or training.
 
 #### CFA Exams
 | **Exam Level** | **# Exams** | **Questions/Exam** | **Total** | **Description** |
@@ -68,9 +68,16 @@ We will sample 150 questions from the test split for our evaluation.
 
 #### 📁 XBRL Dataset
 
-| **Dataset** | **Size** | **Metrics**     | **Dataset Link**      | **Description** | **Example** |
-|--------------|----------|----------------|------------------------|----------------|--------------| 
-| FinCL[7]     | 500      | Accuracy        | [Link](https://github.com/The-FinAI/FinTagging/tree/main/subdata)|
+| **Dataset** | **Size** | **Metrics**     | **Dataset Link**      | **Description** |
+|--------------|----------|----------------|------------------------|----------------|
+|XBRL tag extraction| 100 |   Accuracy    |     [Link](https://huggingface.co/datasets/wangd12/XBRL_analysis)         | Extract a specific XBRL tag from a raw XBRL text segment given a natural language description of the tag|
+| XBRL value extraction| 100 |  Accuracy      |    [Link](https://huggingface.co/datasets/wangd12/XBRL_analysis)      | Extract a numeric value from the raw XBRL text segment given a natural language description of the value.|
+| XBRL formula construction| 100 |    Accuracy    |    [Link](https://huggingface.co/datasets/wangd12/XBRL_analysis)      | First identify and select multiple relevant facts (and their corresponding XBRL tags) from the XBRL data, and then construct a standard financial formula.|
+| XBRL formula calculation| 100 |    Accuracy    |    [Link](https://huggingface.co/datasets/wangd12/XBRL_analysis)      | Build on the previous task and requires the LLM to substitute the actual numeric values into the formula and compute the final result.|
+| Financial Numeric Identification (FinNI)[7]     | 200      | F1        | [Link](https://github.com/The-FinAI/FinTagging/tree/main/subdata)| Focus on identifying numerical values in a financial document and assigning each a coarse-grained value data type. This corresponds to detecting the Fact and Type components of each triplet {Fact,Type,Tag} defined in the overall task.| 
+| Financial Concept Linking (FinCL) [7]     | 500      | Accuracy        | [Link](https://github.com/The-FinAI/FinTagging/tree/main/subdata)| Semantically ground each identified numerical entity by linking it to a concept in a predefined financial taxonomy, which is the Tag component of each triplet {Fact,Type,Tag} defined in the overall task. |
+
+For all question sets, we sample some questions from the test split. Participants should NOT use the test split to fine-tune their model. For FinNI and FinCL tasks, participants can utilize these [resources](https://github.com/The-FinAI/FinTagging/blob/main/annotation/TrainingSet_Annotation.json) as training data.
 
 ##### 📂 How to Download XBRL Filings
 
