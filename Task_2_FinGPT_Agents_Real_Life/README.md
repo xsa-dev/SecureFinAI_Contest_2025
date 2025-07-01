@@ -31,7 +31,7 @@ Your primary goal is to fine-tune or train a language model for financial analyt
 
 ### 📊 Question Dataset Overview
 
-This dataset contains question-answer pairs collected and organized for evaluating model capabilities across CFA exams, BloombergGPT benchmark tasks, and XBRL tasks.
+This dataset contains question-answer pairs collected and organized for evaluating model capabilities across CFA exams, BloombergGPT benchmark tasks, and XBRL tasks. These question sets are used to benchmark your agent's performance. You should NOT use it for fine-tuning or training.
 
 #### CFA Exams
 | **Exam Level** | **# Exams** | **Questions/Exam** | **Total** | **Description** |
@@ -57,10 +57,10 @@ This dataset contains question-answer pairs collected and organized for evaluati
 #### BloombergGPT [1] Public Benchmark Datasets
 | **Dataset**                             | **Size** | **Metrics**       | **# of shots** | **Dataset Link**                                                                 | **Description** |
 |-----------------------------------------|----------|-------------------|----------------|----------------------------------------------------------------------------------|-----------------|
-| Financial Phrasebank Dataset (FPB) [2]  | 150      | F1                | 5              | [Link](https://huggingface.co/datasets/ChanceFocus/en-fpb)                      | The Financial Phrasebank Dataset includes a sentiment classification task on sentences from financial news. Any news that could benefit/hurt an investor is considered positive/negative and neutral otherwise. |
-| FiQA SA [3]                             | 150      | F1                | 5              | [Link](https://huggingface.co/datasets/ChanceFocus/flare-fiqasa)                | This is a sentiment analysis task to predict the aspect-specific sentiment in English financial news and microblog headlines, which were published as a part of the 2018 challenge on financial question answering and opinion mining. |
-| Headline [4]                            | 150      | F1                | 5              | [Link](https://huggingface.co/datasets/ChanceFocus/flare-headlines)             | This is a binary classification task of whether a news headline in the gold commodity domain includes certain information. This human-annotated dataset consists of English news headlines about “gold”. |
-| NER [5]                                 | 98       | F1                | 20             | [Link](https://huggingface.co/datasets/TheFinAI/flare-ner)                      | This is a named entity recognition task on financial data gathered for credit risk assessment from financial agreements filed with the SEC. |
+| Financial Phrasebank Dataset (FPB) [2]  | 150      | F1                | 5              | [Link](https://huggingface.co/datasets/TheFinAI/en-fpb)                      | The Financial Phrasebank Dataset includes a sentiment classification task on sentences from financial news. Any news that could benefit/hurt an investor is considered positive/negative and neutral otherwise. |
+| FiQA SA [3]                             | 150      | F1                | 5              | [Link](https://huggingface.co/datasets/TheFinAI/fiqa-sentiment-classification)                | This is a sentiment analysis task to predict the aspect-specific sentiment in English financial news and microblog headlines, which were published as a part of the 2018 challenge on financial question answering and opinion mining. |
+| Headline [4]                            | 150      | F1                | 5              | [Link](https://huggingface.co/datasets/FinGPT/fingpt-headline-cls)             | This is a binary classification task of whether a news headline in the gold commodity domain includes certain information. This human-annotated dataset consists of English news headlines about “gold”. |
+| NER [5]                                 | 150       | F1                | 20             | [Link](https://huggingface.co/datasets/FinGPT/fingpt-ner-cls)                      | This is a named entity recognition task on financial data gathered for credit risk assessment from financial agreements filed with the SEC. |
 | ConvFinQA [6]                           | 150      | Match Accuracy    | 20             | [Link](https://huggingface.co/datasets/FinGPT/fingpt-convfinqa)                 | Given input from S&P 500 earnings reports that includes text and at least one table with financial data, the task is to answer conversational questions that require numerical reasoning over the input. |
 
 We will sample 150 questions from the test split for our evaluation.
@@ -68,8 +68,9 @@ We will sample 150 questions from the test split for our evaluation.
 
 #### 📁 XBRL Dataset
 
-| **Data Category**                         | **Size** | **Metrics**     | **Data Source**                                                                 |
-|------------------------------------------|----------|----------------|---------------------------------------------------------------------------------|
+| **Dataset** | **Size** | **Metrics**     | **Dataset Link**      | **Description** | **Example** |
+|--------------|----------|----------------|------------------------|----------------|--------------| 
+| FinCL[7]     | 500      | Accuracy        | [Link](https://github.com/The-FinAI/FinTagging/tree/main/subdata)|
 
 ##### 📂 How to Download XBRL Filings
 
@@ -109,6 +110,7 @@ Note: We will additionally test on a subset of the FiNER-139 and FNXL datasets. 
 
 ---
 
+### 📥 Submission Requirement
 
 ### 📊 Metrics
 The model evaluation in each domain is the average score of all tasks. 
@@ -130,3 +132,5 @@ To ensure fair comparison and practical deployment, it is recommended that the m
 [5] Julio Cesar Salinas Alvarado, Karin Verspoor, and Timothy Baldwin. Domain adaption of named entity recognition to support credit risk assessment. In Proceedings of the Australasian Language Technology Association Workshop 2015, pages 84–90, Parramatta, Australia, December 2015. URL https://aclanthology.org/U15-1010.
 
 [6] Zhiyu Chen, Shiyang Li, Charese Smiley, Zhiqiang Ma, Sameena Shah, and William Yang Wang. ConvFinQA: Exploring the chain of numerical reasoning in conversational finance question answering. In Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing, pages 6279–6292, Abu Dhabi, United Arab Emirates, December 2022. Association for Computational Linguistics. URL https://aclanthology. org/2022.emnlp-main.421.
+
+[7] Yan Wang, Yang Ren, Lingfei Qian, Xueqing Peng, Keyi Wang, Yi Han, Dongji Feng, Xiao-Yang Liu, Jimin Huang, and Qianqian Xie. FinTagging: An LLM-ready Benchmark for Extracting and Structuring Financial Information. arXiv: 2505.20650, 2025.
