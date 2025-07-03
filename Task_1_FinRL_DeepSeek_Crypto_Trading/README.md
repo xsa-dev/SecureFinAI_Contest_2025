@@ -56,11 +56,12 @@ This starter kit demonstrates how to use the provided code. We provide you with 
 
 ## Dataset
 
-A dataset containing second-level Limit Order Book (LOB) data and financial news for Bitcoin is provided. Please download [here](https://drive.google.com/drive/folders/1rV9tJ0T2iWNJ-g3TI4Qgqy0cVf_Zqzqp?usp=sharing). All of the datasets required to train DRL agents are in the data directory, please download this into the Task 1 starter dir `data/` folder
+A dataset containing second-level Limit Order Book (LOB) data and financial news for Bitcoin is provided. All of the datasets required to train DRL agents are in the data directory, please download this into the Task 1 starter dir `data/` folder
 
-The dataset contains the following file: 
-- `BTC_news_train.csv`: BTC news with corresponding DeepSeek V3 engineered sentiment scores and risk scores.
-- `BTC_1sec_with_sentiment_risk_train.csv`: The merged and time-aligned version of the previous two datasets.
+| **Filename**                              | **Description**                                                                                                           | **Link**                                                                                                                    |
+|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| `FinRL_BTC_news_signals`                      | BTC news with corresponding DeepSeek V3 engineered sentiment scores and risk scores.                                      | [Hugging Face](https://huggingface.co/datasets/SecureFinAI-Lab/FinRL_BTC_news_signals)                       |
+| `BTC_1sec_with_sentiment_risk_train.csv`  | The merged and time-aligned version of the previous two datasets.                                                         |   [Google Drive](https://drive.google.com/drive/folders/1rV9tJ0T2iWNJ-g3TI4Qgqy0cVf_Zqzqp?usp=sharing)                                  |
 
 The `BTC_1sec_with_sentiment_risk_train.csv` contains all data used to train the RNN model and FinRL agent. 
 
