@@ -10,7 +10,7 @@ client = OpenAI(
     base_url="https://api.deepseek.com/v1"
 )
 
-
+COUNT = 0
 ##### Prompt Engineering
 # A robust prompt that requests a JSON object with all the required fields.
 # It includes a high-quality example to make the output very reliable.
@@ -39,9 +39,9 @@ Article Text: {text}
 
 RISK_PROMPT_TEMPLATE = """
 You are a professional cryptocurrency risk analyst. Your task is to analyze the following news article to identify potential risks related to Bitcoin (BTC) or the broader crypto market.
-
+\n
 You must provide your analysis in a structured JSON format. The JSON object must contain the following keys:
-- "risk_score": An integer from 1 (extremely negative) to 5 (extremely positive), where 3 means neutral.
+- "risk_score": An integer from 1 (low risk) to 5 (high risk).
 - "confidence_score_risk": A float between 0.0 and 1.0, representing your confidence in the risk analysis.
 - "reasoning_risk": A concise, one-sentence explanation for your risk assessment.
 
@@ -112,7 +112,7 @@ def analyze_article_risk(title: str, text: str) -> dict | None:
         or None if an error occurs.
     """
     formatted_prompt = RISK_PROMPT_TEMPLATE.format(title=title, text=text)
-
+    global COUNT
     try:
         response = client.chat.completions.create(
             model="deepseek-chat",
@@ -125,6 +125,8 @@ def analyze_article_risk(title: str, text: str) -> dict | None:
         analysis_data = json.loads(response_content)
 
         required_keys = ["risk_score", "confidence_score_risk", "reasoning_risk"]
+        COUNT += 1
+        print(f"Processed {COUNT} articles...")
         if all(key in analysis_data for key in required_keys):
             return analysis_data
         else:
@@ -168,14 +170,14 @@ def get_risk(row: pd.Series) -> pd.Series:
 # --- 3. Data Loading and Processing ---
 if __name__ == "__main__":
     news_df = pd.read_csv('./datasets/combined_data.csv')  # Replace with your actual CSV file path
-    print("Start sentiment analysis...")
-    sentiment_results_df = news_df.apply(get_sentiment, axis=1)
-    enriched_df = news_df.join(sentiment_results_df)
-    enriched_df.to_csv('news_with_sentiment_analysis.csv', index=False, encoding='utf-8')
+    # print("Start sentiment analysis...")
+    # sentiment_results_df = news_df.apply(get_sentiment, axis=1)
+    # enriched_df = news_df.join(sentiment_results_df)
+    # enriched_df.to_csv('news_with_sentiment_analysis.csv', index=False, encoding='utf-8')
 
     print("Start risk analysis...")
     risk_results_df = news_df.apply(get_risk, axis=1)
-    enriched_df = enriched_df.join(risk_results_df)
+    enriched_df = news_df.join(risk_results_df)
     enriched_df.to_csv('news_with_risk_analysis.csv', index=False, encoding='utf-8')
 
     # # Save the final DataFrame to a new CSV file
