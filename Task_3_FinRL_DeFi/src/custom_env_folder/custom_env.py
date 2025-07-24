@@ -146,7 +146,7 @@ class Uniswapv3Env(gym.Env):
         self.dx = self.dx[ma_window_max:]
         
         self.market_data = self.market_data[ma_window_max:]
-        self.ew_sigma = self.ew_sigma[ma_window_max:]
+        self.ew_sigma = self.ew_sigma[ma_window_max-1:] # We use a -1 because we compute the ew_sigma on the log returns, which are shifted by one time step.
             
     def reset(self, **kwargs):
     
