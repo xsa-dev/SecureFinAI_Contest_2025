@@ -12,6 +12,7 @@ weight: 1
 
 ### Thanks to the AI4Finance Foundation open source community for their support.
 
+## The paper submission deadline has been extended to Aug 31.
 ## Please find the starter kit [here](https://github.com/Open-Finance-Lab/FinAI_Contest_2025)!
 
 ## Introduction
