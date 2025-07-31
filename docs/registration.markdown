@@ -12,8 +12,8 @@ weight: 2
 * **Starter-Kit Release**: July 2, 2025
 
   <span style="color:red;">Find starter kit [here](https://github.com/Open-Finance-Lab/FinAI_Contest_2025)</span>
-* **Paper Submission Deadline**: Aug 1, 2025
-* **Paper Notification**: Sept 1, 2025
+* **Paper Submission Deadline**: ~~Aug 1, 2025~~ Aug 31, 2025
+* **Paper Notification**: ~~Sept 1, 2025~~ Sept 15, 2025
 * **Paper Cemera Ready**: Oct 1, 2025
 * **Solution Submission Deadline**: Sept 15, 2025
 * **Winner Notification**: Oct 15, 2025
