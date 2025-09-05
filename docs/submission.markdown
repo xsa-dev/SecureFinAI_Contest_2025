@@ -11,11 +11,11 @@ weight: 3
 
 Please provide your solution to [TBD](). Each team can submit multiple times and we will only use the latest version you submit. Your models and scripts should be accessible and runnable.
 
-#### **Task I FinRL-DeepSeek for Crypto Trading**
+#### **Task I**
 
 Participants need to submit a well-organized GitHub repository containing all scripts, model weights, and any custom libraries used to implement the solution. A readme should be included for solution implementation instructions.
 
-#### **Task II FinGPT Agents in Real Life**
+#### **Task II**
 
 Participants need to submit a Hugging Face link containing
 
@@ -23,27 +23,25 @@ Participants need to submit a Hugging Face link containing
 - for fine-tuned models, all files generated from fine-tuning excluding checkpoints,
 - scripts that load and inference with the model (including code for calling external tools).
 
-#### **Task III FinRL-DeFi**
+#### **Task III**
 
-Participants need to submit a well-organized GitHub repository containing
+Participants need to submit a Hugging Face link containing
 
-- complete code for training and inference (scripts, classes, and configurations)
-- trained model weights
-- An evaluation script (e.g., evaluate_agent.py) that runs inference on the provided test environment on the test dataset,
-- A short README file with setup and usage instructions
-- Optionally: Docker container with all dependencies for reproducibility
+- the model that can be easily loaded,
+- for fine-tuned models, all files generated from fine-tuning excluding checkpoints,
+- scripts that load and inference with the model (including code for calling external tools).
 
-### **Paper Submission Requirements**:
+### **Poster Submission Requirements**:
 
-Each team should submit short papers with 3 complimentary pages and up to 2 extra pages, including all figures, tables, and references. The paper submission is through [the special track: SecureFinAI](https://www.cloud-conf.net/cscloud/2025/cscloud/cfp_files/SecureFinAI_CFP.pdf) and should follow its instructions. Please include “FinAI Contest 2025 Task 1/2/3” in your abstract.
+
 
 ## Evaluation
 
-For each task, the final ranking of participants will be determined by a weighted combination of model evaluation and paper assessment, with weights of 60% and 40% respectively.
+For each task, the final ranking of participants will be determined by a weighted combination of model evaluation and poster assessment, with weights of 60% and 40% respectively.
 
 ### **Model Evaluation**:
 
-#### **Task I FinRL-DeepSeek for Crypto Trading**
+#### **Task I**
 
 The performance of the model will be assessed using the following metrics:
 
@@ -53,22 +51,14 @@ The performance of the model will be assessed using the following metrics:
 
 <span style="color:blue;">The final model ranking will be based solely on the **Sharpe Ratio**.</span>
 
-#### **Task II FinGPT Agents in Real Life**
+#### **Task II**
 
 The score of the model is the average score of all tasks in that domain. The metrics are specified in the starter kit.
 
-#### **Task III FinRL-DeFi**
+#### **Task III**
 
-The main metric is the **cumulative reward**, computed at each time step as:
 
-<p align="center"><strong>Reward = Trading Fees − LVR Penalty − Gas Cost</strong></p>
 
-Where:
-
-- Trading Fees are collected when swaps occur within the active price range.
-- LVR Penalty (Loss-Versus-Rebalancing) represents the opportunity cost of capital locked in the AMM compared to alternative uses.
-- Gas Cost is incurred when rebalancing the liquidity position.
-
-### **Paper Assessment**:
+### **Poster Assessment**:
 
 The assessment of the paper will be conducted by invited experts and professionals. The judges will independently rate the data and model analysis, robustness and generalizability, innovation and creativity, organization and readability, each accounting for 20% of the qualitative assessment.
