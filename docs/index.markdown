@@ -39,19 +39,17 @@ This task is to develop crypto trading agents by integrating transformer-based a
 
 ### Task II: FinGPT Agents for SEC Filings Analysis
 
-This task is to fine-tune LLMs and develop financial agents to interpret the professional language of finance. Participants are expected to train or fine-tune their LLMs to perform tasks in three domains: the CFA exam, the BloombergGPT benchmarks, and XBRL. We encourage participants to use LoRA and reinforcement fine-tuning.
+This task is to fine-tune LLMs and develop financial agents to interpret the professional language of finance. Participants are expected to train or fine-tune their LLMs to perform SEC Filings Analysis with XBRL. We encourage participants to use LoRA and reinforcement fine-tuning.
 
-* **CFA exam**: The CFA (Chartered Financial Analyst) exam is a globally recognized exam for financial analysts. It covers a wide range of financial topics, such as investment, economics, and quantitative methods.
-* **BloombergGPT** [9]: Compare the performance of your model with BloombergGPT on its public financial benchmarks.
 * **XBRL**: XBRL (eXtensible Business Reporting Language) is a standard language for electronic communication of business and financial data. It has been widely used in regulatory filings, such as SEC filings.
 
 **Datasets**: We will provide the data sources for the three domains so that participants can collect data themselves. Participants can collect these data to fine-tune their LLMs and develop their agents. The full question sets for evaluation will be released during the evaluation period.
 
 ### Task III: FinGPT Agents for Regulation and Compliance
 
-This task focuses on developing FinGPT agents for regulatory and compliance scenarios in finance with zero-knowledge proof verification. The task covers multiple regulatory domains including financial data retrieval, sentiment analysis, antitrust and copyright compliance verification, patent and IP protection analysis, and financial audio processing for compliance monitoring.
+This task focuses on developing FinGPT agents for regulatory and compliance scenarios in finance. Participants will build LLM-based agents to handle a range of subtasks, including financial data retrieval, sentiment analysis, antitrust and copyright reasoning, patent and IP protection, and financial audio transcription. 
 
-**Datasets**: We will provide regulatory datasets covering various compliance scenarios including AML data, regulatory filings, compliance questionnaires, and audit trails, along with evaluation frameworks that incorporate zero-knowledge proof verification.
+**Datasets**: We will provide regulatory datasets covering various compliance scenarios including AML data, regulatory filings, compliance questionnaires, and audit trails, along with evaluation frameworks.
 
 
 <p style="font-size: 10px;">
