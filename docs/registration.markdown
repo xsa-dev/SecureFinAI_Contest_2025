@@ -7,8 +7,7 @@ weight: 2
 
 ## Timeline
 * **Team Registration Begin**:
-
-
+    Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSf0txC2U2v0E9tC6CEI4tmadudzMPP4NwJS1xpCj37-452C2w/viewform?usp=header).
 * **Starter-Kit Release**: 
 
 * **Paper Submission Deadline**: 
@@ -23,7 +22,7 @@ weight: 2
 We will award contest certificates to all participating teams. Winners will be invited to attend the conference and have the opportunity to present their work and poster at the conference.
 
 ## Registration
-Team registration is done through the [form](). Please ensure that all team members provide their full names, emails, institutions, and the team name. We encourage you to use your institutional email to register.
+Team registration is done through the [form](https://docs.google.com/forms/d/e/1FAIpQLSf0txC2U2v0E9tC6CEI4tmadudzMPP4NwJS1xpCj37-452C2w/viewform?usp=header). Please ensure that all team members provide their full names, emails, institutions, and the team name. We encourage you to use your institutional email to register.
 
 The top winners of each task should register the [conference]() and present their work in person or online at the conference. 
 
