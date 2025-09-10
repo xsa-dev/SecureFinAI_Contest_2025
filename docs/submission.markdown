@@ -57,8 +57,9 @@ The score of the model is the average score of all tasks in that domain. The met
 
 #### **Task III**
 
+The score of the model is the average score of all tasks in that domain. The metrics are specified in the starter kit.
 
 
 ### **Poster Assessment**:
 
-The assessment of the paper will be conducted by invited experts and professionals. The judges will independently rate the data and model analysis, robustness and generalizability, innovation and creativity, organization and readability, each accounting for 20% of the qualitative assessment.
+The assessment of the poster will be conducted by invited experts and professionals. The judges will independently rate the data and model analysis, robustness and generalizability, innovation and creativity, organization and readability, each accounting for 20% of the qualitative assessment.

@@ -6,16 +6,14 @@ weight: 2
 ---
 
 ## Timeline
-* **Team Registration Begin**:
-    Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSf0txC2U2v0E9tC6CEI4tmadudzMPP4NwJS1xpCj37-452C2w/viewform?usp=header).
-* **Starter-Kit Release**: 
-
-* **Paper Submission Deadline**: 
-* **Paper Notification**: 
-* **Paper Cemera Ready**: 
-* **Solution Submission Deadline**: 
-* **Winner Notification**: 
-* **Winner Announcement**: 
+* **Team Registration Begin**: Sep 9, 2025
+    
+    * Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSf0txC2U2v0E9tC6CEI4tmadudzMPP4NwJS1xpCj37-452C2w/viewform?usp=header).
+* **Starter-Kit Release**: Sep 15, 2025
+* **Solution Submission Deadline**: Oct 25, 2025
+* **Poster Submission Deadline**: Oct 31, 2025
+* **Winner Notification**: Nov 5, 2025
+* **Winner Announcement**: Nov 15-18, 2025
 
 <span style="color:blue;">(All deadlines are at 11:59pm EST on the specified date.)</span>
 
@@ -24,7 +22,7 @@ We will award contest certificates to all participating teams. Winners will be i
 ## Registration
 Team registration is done through the [form](https://docs.google.com/forms/d/e/1FAIpQLSf0txC2U2v0E9tC6CEI4tmadudzMPP4NwJS1xpCj37-452C2w/viewform?usp=header). Please ensure that all team members provide their full names, emails, institutions, and the team name. We encourage you to use your institutional email to register.
 
-The top winners of each task should register the [conference]() and present their work in person or online at the conference. 
+The top winners of each task should register the [ACM ICAIF 2025 conference](https://icaif25.org/) and present their work in person or online at the conference. 
 
 
 ## Rules

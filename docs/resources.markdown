@@ -4,6 +4,10 @@ title: Resources
 permalink: /4-resources/
 weight: 4
 ---
+# FinRL Contest Paper
+The paper summarizes the series of FinRL Contests from 2023 to 2025, including different trading tasks, starter kits, benchmark protocol, and performance. Feel free to read the paper [here](https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/aie2.12004) and get ideas from baselines and winners' solutions.
+
+Keyi Wang, Nikolaus Holzer, Ziyi Xia, Yupeng Cao, Jiechao Gao, Anwar Walid, Kairong Xiao, and Xiao-Yang Liu Yanglet. FinRL Contests: Benchmarking data-driven financial reinforcement learning agents. *Wiley Artificial Intelligence for Engineering*, 2025.
 
 # Events
 
@@ -14,7 +18,7 @@ We presented FinRL, FinRL-DeepSeek, and FinRL Contest 2025 with Paris Machine Le
 
 # FinRL Trading Agents Blog
 
-New to FinRL? Start your journey by reading our [blog](https://berylventures.com/spotlights) about FinRL trading agents.
+New to FinRL? Start your journey by reading our [blog](https://berylventures.com/spotlights#:~:text=Financial%20Reinforcement%20Learning) about FinRL trading agents.
 
 # FinRL Contests
 

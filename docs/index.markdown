@@ -31,13 +31,13 @@ We design three tasks: (1) FinRL-Transformer for Cryptocurrency Trading, (2) Fin
 ## Tasks
 Each team can choose to participate in one or more tasks. The prizes will be awarded for each task.
 
-### Task I: FinRL-Transformer for Cryptocurrency Trading
+### Task I: FinRL-Transformer for Cryptocurrency Trading Agents
 
 This task is to develop crypto trading agents by integrating transformer-based architectures and LLM-generated signals in FinRL, using financial news and market data. Participants can build upon transformer architectures (e.g., with new attention mechanisms, new ways to inject LLM-processed news signals into the transformer agent, new optimization algorithms) or explore more computationally intensive directions, such as adapting variants of modern transformer training methods to this crypto trading task.
 
 **Datasets**: We will provide the second-level LOB data and financial news for Bitcoin. Participants are permitted to use additional external datasets.
 
-### Task II: FinGPT Agents for SEC Filings Analysis
+### Task II: FinGPT-Powered Analyzer for SEC Filings
 
 This task is to fine-tune LLMs and develop financial agents to interpret the professional language of finance. Participants are expected to train or fine-tune their LLMs to perform SEC Filings Analysis with XBRL. We encourage participants to use LoRA and reinforcement fine-tuning.
 
@@ -45,7 +45,7 @@ This task is to fine-tune LLMs and develop financial agents to interpret the pro
 
 **Datasets**: We will provide the data sources for the three domains so that participants can collect data themselves. Participants can collect these data to fine-tune their LLMs and develop their agents. The full question sets for evaluation will be released during the evaluation period.
 
-### Task III: FinGPT Agents for Regulation and Compliance
+### Task III: FinGPT-Powered Compliance Agents
 
 This task focuses on developing FinGPT agents for regulatory and compliance scenarios in finance. Participants will build LLM-based agents to handle a range of subtasks, including financial data retrieval, sentiment analysis, antitrust and copyright reasoning, patent and IP protection, and financial audio transcription. 
 
