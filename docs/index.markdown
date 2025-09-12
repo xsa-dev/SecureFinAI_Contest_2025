@@ -37,19 +37,18 @@ This task is to develop crypto trading agents by integrating transformer-based a
 
 **Datasets**: We will provide the second-level LOB data and financial news for Bitcoin. Participants are permitted to use additional external datasets.
 
-### Task II: FinGPT-Powered Analyzer for SEC Filings
+### Task II: FinGPT-Powered Compliance Agents
 
-This task is to fine-tune LLMs and develop financial agents to interpret the professional language of finance. Participants are expected to train or fine-tune their LLMs to perform SEC Filings Analysis with XBRL. We encourage participants to use LoRA and reinforcement fine-tuning.
+This task focuses on developing FinGPT agents for regulatory and compliance scenarios in finance. Participants will build LLM-based agents to handle a range of subtasks, including analyzing SEC filings, financial data retrieval, sentiment analysis, antitrust and copyright reasoning, patent and IP protection, and financial audio transcription. 
 
-* **XBRL**: XBRL (eXtensible Business Reporting Language) is a standard language for electronic communication of business and financial data. It has been widely used in regulatory filings, such as SEC filings.
-
-**Datasets**: We will provide the data sources for the three domains so that participants can collect data themselves. Participants can collect these data to fine-tune their LLMs and develop their agents. The full question sets for evaluation will be released during the evaluation period.
-
-### Task III: FinGPT-Powered Compliance Agents
-
-This task focuses on developing FinGPT agents for regulatory and compliance scenarios in finance. Participants will build LLM-based agents to handle a range of subtasks, including financial data retrieval, sentiment analysis, antitrust and copyright reasoning, patent and IP protection, and financial audio transcription. 
 
 **Datasets**: We will provide regulatory datasets covering various compliance scenarios including AML data, regulatory filings, compliance questionnaires, and audit trails, along with evaluation frameworks.
+
+### Task III：FinGPT-Powered Agents for MultiModal Financial Data
+
+This task focuses on developing FinGPT agents to process and analyze multimodal financial data. We use the MultiFinBen [8] datasets as the benchmark datasets. Participants will build LLM-based agents to handle a range of subtasks, involving multimodal data, such as charts, image, and audio.  
+
+**Datasets**: We will provide selected databsets from MultifinBen.
 
 
 <p style="font-size: 10px;">
@@ -74,11 +73,9 @@ This task focuses on developing FinGPT agents for regulatory and compliance scen
 [7] Shijie Han, Haoqiang Kang, Bo Jin, Xiao-Yang Liu, Steve Yang. XBRL Agent: Leveraging Large Language Models for Financial Report Analysis. ACM International Conference on AI in Finance, 2024.
 </p>
 <p style="font-size: 10px;">
-[8] Haonan Xu and Alessio Brini. Improving DeFi Accessibility through Efficient Liquidity Provisioning with Deep Reinforcement Learning. arXiv: 2501.07508, 2025.
+[8] Peng X, Qian L, Wang Y, Xiang R, He Y, Ren Y, Jiang M, Zhao J, He H, Han Y, Feng Y, et al. MultiFinBen: A Multilingual, Multimodal, and Difficulty-Aware Benchmark for Financial LLM Evaluation. arXiv preprint arXiv:2506.14028. 2025 Jun 16.
 </p>
-<p style="font-size: 10px;">
-[9] Shijie Wu, Ozan Irsoy, Steven Lu, Vadim Dabravolski, Mark Dredze, Sebastian Gehrmann, Prabhanjan Kambadur, David Rosenberg, Gideon Mann. BloombergGPT: A Large Language Model for Finance. arXiv: 2303.17564, 2023.
-</p>
+
 
 ## Contact
 Contact email: [finrlcontest@gmail.com](mailto:finrlcontest@gmail.com)
