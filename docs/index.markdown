@@ -52,29 +52,29 @@ This task focuses on developing FinGPT agents to process and analyze multimodal 
 **Datasets**: We will provide selected databsets from MultifinBen.
 
 
-<p style="font-size: 10px;">
-[1] Keyi Wang, Nikolaus Holzer, Ziyi Xia, Yupeng Cao, Jiechao Gao, Anwar Walid, Kairong Xiao, and  Xiao-Yang Liu Yanglet. FinRL Contests: Benchmarking Data-driven Financial Reinforcement Learning Agents. arXiv preprint arxiv.org/abs/2504.02281, 2025.
+<p style="font-size: 14px;">
+[1] Wang, Keyi, et al. "FinRL Contests: Data‐Driven Financial Reinforcement Learning Agents for Stock and Crypto Trading." <em>Artificial Intelligence for Engineering</em> (2025). [<a href="https://arxiv.org/abs/2504.02281">arXiv</a>]
 </p>
-<p style="font-size: 10px;">
-[2] Xiao-Yang Liu, Ziyi Xia, Jingyang Rui, Jiechao Gao, Hongyang Yang, Ming Zhu, Christina Wang, Zhaoran Wang, and Jian Guo. FinRL-Meta: Market environments and benchmarks for data-driven financial reinforcement learning. Advances in Neural Information Processing Systems 35, 1835-1849, 2022.
+<p style="font-size: 14px;">
+[2] Liu, Xiao-Yang, et al. "Finrl-meta: Market environments and benchmarks for data-driven financial reinforcement learning." <em>Advances in Neural Information Processing Systems</em> 35 (2022): 1835-1849. [<a href="https://papers.neurips.cc/paper_files/paper/2022/file/0bf54b80686d2c4dc0808c2e98d430f7-Paper-Datasets_and_Benchmarks.pdf">NeurIPS</a>]
 </p>
-<p style="font-size: 10px;">
-[3] Xiao-Yang Liu, Hongyang Yang, Qian Chen, Runjia Zhang, Liuqing Yang, Bowen Xiao, and Christina Dan Wang. FinRL: A Deep Reinforcement Learning Library for Automated Stock Trading in Quantitative Finance. Deep Reinforcement Learning Workshop, NeurIPS. 2020.
+<p style="font-size: 14px;">
+[3] Liu, Xiao-Yang, et al. "FinRL: A deep reinforcement learning library for automated stock trading in quantitative finance." <em>arXiv preprint</em> arXiv:2011.09607 (2020). [<a href="https://arxiv.org/abs/2011.09607">arXiv</a>] [<a href="https://neurips.cc/virtual/2020/19841">NeurIPS 2020</a>]
 </p>
-<p style="font-size: 10px;">
-[4] Xiao-Yang Liu, Guoxuan Wang, Hongyang Yang, and Daochen Zha. FinGPT: Democratizing internet-scale data for financial large language models. Workshop on Instruction Tuning and Instruction Following, NeurIPS 2023.
+<p style="font-size: 14px;">
+[4] Liu, Xiao-Yang, et al. "Fingpt: Democratizing internet-scale data for financial large language models." <em>arXiv preprint</em> arXiv:2307.10485 (2023). [<a href="https://arxiv.org/abs/2307.10485">arXiv</a>]
 </p>
-<p style="font-size: 10px;">
-[5] Felix Tian, Ajay Byadgi, Daniel Kim, Daochen Zha, Matt White, Kairong Xiao, Xiao-Yang Liu. Customized FinGPT Search Agents Using Foundation Models. ACM International Conference on AI in Finance, 2024.
+<p style="font-size: 14px;">
+[5] Tian, Felix, et al. "Customized fingpt search agents using foundation models." <em>Proceedings of the 5th ACM International Conference on AI in Finance</em>. 2024. [<a href="https://dl.acm.org/doi/10.1145/3677052.3698637">ACM</a>]
 </p>
-<p style="font-size: 10px;">
-[6] Xiao-Yang Liu Yanglet, Yupeng Cao, and Li Deng. Multimodal financial foundation models (MFFMs): Progress, prospects, and challenges.  arXiv preprint arxiv.org/abs/2506.01973, 2025.
+<p style="font-size: 14px;">
+[6] Yanglet, Xiao-Yang Liu, Yupeng Cao, and Li Deng. "Multimodal financial foundation models (mffms): Progress, prospects, and challenges." <em>arXiv preprint</em> arXiv:2506.01973 (2025). [<a href="https://www.arxiv.org/abs/2506.01973">arXiv</a>]
 </p>
-<p style="font-size: 10px;">
-[7] Shijie Han, Haoqiang Kang, Bo Jin, Xiao-Yang Liu, Steve Yang. XBRL Agent: Leveraging Large Language Models for Financial Report Analysis. ACM International Conference on AI in Finance, 2024.
+<p style="font-size: 14px;">
+[7] Han, Shijie, et al. "Xbrl agent: Leveraging large language models for financial report analysis." <em>Proceedings of the 5th ACM International Conference on AI in Finance</em>. 2024. [<a href="https://dl.acm.org/doi/abs/10.1145/3677052.3698614">ACM</a>]
 </p>
-<p style="font-size: 10px;">
-[8] Peng X, Qian L, Wang Y, Xiang R, He Y, Ren Y, Jiang M, Zhao J, He H, Han Y, Feng Y, et al. MultiFinBen: A Multilingual, Multimodal, and Difficulty-Aware Benchmark for Financial LLM Evaluation. arXiv preprint arXiv:2506.14028. 2025 Jun 16.
+<p style="font-size: 14px;">
+[8] Peng, Xueqing, et al. "MultiFinBen: A Multilingual, Multimodal, and Difficulty-Aware Benchmark for Financial LLM Evaluation." <em>arXiv preprint</em> arXiv:2506.14028 (2025). [<a href="https://arxiv.org/abs/2506.14028">arXiv</a>]
 </p>
 
 
