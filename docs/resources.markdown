@@ -9,12 +9,6 @@ The paper summarizes the series of FinRL Contests from 2023 to 2025, including d
 
 Keyi Wang, Nikolaus Holzer, Ziyi Xia, Yupeng Cao, Jiechao Gao, Anwar Walid, Kairong Xiao, and Xiao-Yang Liu Yanglet. FinRL Contests: Benchmarking data-driven financial reinforcement learning agents. *Wiley Artificial Intelligence for Engineering*, 2025.
 
-# Events
-
-<div style="display: flex; justify-content: center; align-items: center; gap: 1em; flex-wrap: wrap;">
-    <img style="width: 15%;" src="https://github.com/Open-Finance-Lab/FinRL_Contest_2025/blob/main/docs/assets/logos/logo-high-res.webp?raw=true" alt="Paris Machine Learning">
-</div>
-We presented FinRL, FinRL-DeepSeek, and FinRL Contest 2025 with Paris Machine Learning Group. Watch the video [here](https://youtu.be/tvaNIU91rNc?si=IDnmGG1tXVrBZsM6).
 
 # FinRL Trading Agents Blog
 
