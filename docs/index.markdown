@@ -6,9 +6,8 @@ weight: 1
 ---
 
 <div style="text-align: center; display: flex; width: 100%; justify-content: space-evenly; align-items: center; gap: 1em; padding: 2em">
-  <img style="width: 25%;" src="https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/logos/SecureFinAILab.png?raw=true" alt="SecureFinAI Lab Logo">
-  <img style="width: 25%;" src="https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/logos/acm_icaif.png?raw=true" alt="ACM ICAIF Logo">
-  <img style="width: 20%;" src="https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/logos/columbiau.jpeg?raw=true" alt="Columbia Logo">
+  <img style="width: 40%;" src="https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/logos/acm_icaif.png?raw=true" alt="ACM ICAIF Logo">
+  <img style="width: 30%;" src="https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/logos/securefinai_cu.png?raw=true" alt="SecureFinAI Lab Logo">
 </div>
 
 ### Thanks to the AI4Finance Foundation open source community for their support.
@@ -53,7 +52,7 @@ This task focuses on developing FinGPT agents to process and analyze multimodal 
 
 
 <p style="font-size: 14px;">
-[1] Wang, Keyi, et al. "FinRL Contests: Data‐Driven Financial Reinforcement Learning Agents for Stock and Crypto Trading." <em>Artificial Intelligence for Engineering</em> (2025). [<a href="https://arxiv.org/abs/2504.02281">arXiv</a>]
+[1] Wang, Keyi, et al. "FinRL Contests: Data‐Driven Financial Reinforcement Learning Agents for Stock and Crypto Trading." <em>Artificial Intelligence for Engineering</em> (2025). [<a href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/aie2.12004">IET</a>] [<a href="https://arxiv.org/abs/2504.02281">arXiv</a>]
 </p>
 <p style="font-size: 14px;">
 [2] Liu, Xiao-Yang, et al. "Finrl-meta: Market environments and benchmarks for data-driven financial reinforcement learning." <em>Advances in Neural Information Processing Systems</em> 35 (2022): 1835-1849. [<a href="https://papers.neurips.cc/paper_files/paper/2022/file/0bf54b80686d2c4dc0808c2e98d430f7-Paper-Datasets_and_Benchmarks.pdf">NeurIPS</a>]
