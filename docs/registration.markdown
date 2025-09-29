@@ -7,12 +7,12 @@ weight: 2
 
 ## Timeline
 * **Team Registration Begin**: Sep 9, 2025
-    
+
     * Please register [here](https://docs.google.com/forms/d/e/1FAIpQLSf0txC2U2v0E9tC6CEI4tmadudzMPP4NwJS1xpCj37-452C2w/viewform?usp=header).
-* **Starter-Kit Release**: Sep 15, 2025
-* **Solution Submission Deadline**: Oct 25, 2025
-* **Poster Submission Deadline**: Oct 31, 2025
-* **Winner Notification**: Nov 5, 2025
+* **Starter-Kit Release**: Oct 5, 2025
+* **Solution Submission Deadline**: Nov 1, 2025
+* **Poster Submission Deadline**: Nov 5, 2025
+* **Winner Notification**: Nov 14, 2025
 * **Winner Announcement**: Nov 15-18, 2025
 
 <span style="color:blue;">(All deadlines are at 11:59pm EST on the specified date.)</span>
