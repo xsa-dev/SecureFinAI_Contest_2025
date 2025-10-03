@@ -5,12 +5,15 @@
 This task focuses on developing FinGPT agents capable of processing and reasoning over multilingual and multimodal financial data. Participants will build LLM-based agents that can handle complex cross-lingual financial question answering and extract information from visual-text financial documents. We encourage participants to use LoRA and reinforcement fine-tuning.
 
 - **Multilingual Financial QA**: Handle complex reasoning over mixed-language financial inputs across different difficulty levels.
-- **Visual-Text Financial Analysis**: Extract and reason over information from OCR-embedded financial documents in multiple languages.
+- **Visual-Text Financial Analysis**: Convert financial document images to structured HTML format and handle complex financial QA tasks with PolyFiQA dataset.
 - **Cross-Modal Integration**: Combine textual and visual information for comprehensive financial analysis.
 
 #### 🎯 Objective
 
-Your primary goal is to fine-tune or train a language model for multilingual and multimodal financial tasks, covering complex cross-lingual financial reasoning and visual-text document analysis. You may also enhance your agent by integrating external tools, such as a retrieval-augmented knowledge base (RAG), to improve its analytical and question-answering capabilities across different modalities and languages.
+Your primary goal is to fine-tune or train a language model for multilingual and multimodal financial tasks, covering:
+- Complex cross-lingual financial reasoning with PolyFiQA dataset (QA and reasoning tasks)
+- Visual-text document conversion from images to structured HTML (OCR tasks)
+You may also enhance your agent by integrating external tools, such as a retrieval-augmented knowledge base (RAG), to improve its analytical and question-answering capabilities across different modalities and languages.
 
 #### 💡 What You Need To Do
 
@@ -23,12 +26,14 @@ Your primary goal is to fine-tune or train a language model for multilingual and
 3. **Submit Your Agent**
    Submit your agent following the competition guidelines. Make sure your model is:
 
-   - Capable of handling multilingual financial question answering with complex reasoning.
-   - Proficient in extracting and reasoning over information from visual financial documents.
+   - Capable of handling multilingual financial question answering with complex reasoning (PolyFiQA tasks).
+   - Proficient in converting financial document images to structured HTML format (OCR tasks).
    - Robust in cross-modal integration of textual and visual financial information.
 
 4. **Benchmarking Phase**
-   After submission, we will use our question sets to evaluate your model's performance across multilingual financial QA and visual-text financial analysis tasks.
+   After submission, we will use our question sets to evaluate your model's performance across:
+   - Multilingual financial QA tasks (PolyFiQA dataset for reasoning)
+   - Visual-text document conversion tasks (OCR datasets for image-to-HTML conversion)
 
 ---
 
@@ -47,8 +52,8 @@ These question sets contain question-answer pairs collected and organized for ev
 
 | **Task** | **Dataset** | **Size** | **Metrics** | **Description** |
 | -------- | ----------- | -------- | ----------- | --------------- |
-| English OCR Financial QA | EnglishOCR | 1.5k | Accuracy, F1-Score | Extract and reason over information from English visual-text financial documents including charts, tables, and reports. |
-| Spanish OCR Financial QA | SpanishOCR | 1.2k | Accuracy, F1-Score | Extract and reason over information from Spanish visual-text financial documents including charts, tables, and reports. |
+| English OCR to HTML | EnglishOCR | 1.5k | ROUGE-1 | Convert English financial document images to structured HTML format (OCR + HTML generation task). |
+| Spanish OCR to HTML | SpanishOCR | 1.2k | ROUGE-1 | Convert Spanish financial document images to structured HTML format (OCR + HTML generation task). |
 
 We will sample questions from the test split for each dataset for our evaluation.
 
