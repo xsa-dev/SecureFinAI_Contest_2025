@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import ast
 import os
+from device_utils import get_device, print_device_info
 
 def parse_array(s):
     """
@@ -98,6 +99,7 @@ class CryptoDataset(Dataset):
 
 def train(epochs, lr, context_length, model_path, plots_dir):
     print("--- Starting Training ---")
+    print_device_info()
     df = pd.read_csv("crypto_decision_transformer_ready_dataset.csv")
 
     df['episode_start'] = df['episode_start'].astype(bool)
@@ -123,7 +125,8 @@ def train(epochs, lr, context_length, model_path, plots_dir):
         val_df_indices.extend(range(start, end))
     val_df = df.iloc[val_df_indices].reset_index(drop=True)
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # Use optimal device selection with MPS support
+    device = get_device(gpu_id=-1, verbose=True)
 
     # Address Class Imbalance 
     class_counts = train_df['action'].value_counts().sort_index()

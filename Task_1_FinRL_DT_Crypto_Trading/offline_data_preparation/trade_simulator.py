@@ -3,6 +3,7 @@ import torch as th
 import numpy as np
 import pandas as pd
 from data_config import ConfigData
+from device_utils import get_device, print_device_info
 
 
 class TradeSimulator:
@@ -17,7 +18,11 @@ class TradeSimulator:
         device=th.device("cpu"),
         gpu_id=-1,
     ):
-        self.device = th.device(f"cuda:{gpu_id}") if gpu_id >= 0 else device
+        # Use optimal device selection with MPS support
+        if gpu_id >= 0:
+            self.device = get_device(gpu_id=gpu_id, verbose=True)
+        else:
+            self.device = get_device(gpu_id=-1, verbose=True)
         self.num_sims = num_sims
 
         self.slippage = slippage
@@ -241,7 +246,8 @@ class EvalTradeSimulator(TradeSimulator):
 
 def check_simulator():
     gpu_id = int(sys.argv[1]) if len(sys.argv) > 1 else -1  # 从命令行参数里获得GPU_ID
-    device = th.device(f"cuda:{gpu_id}" if (th.cuda.is_available() and (gpu_id >= 0)) else "cpu")
+    # Use optimal device selection with MPS support
+    device = get_device(gpu_id=gpu_id, verbose=True)
     num_sims = 6
     slippage = 0
     step_gap = 2

@@ -2,6 +2,7 @@ import os
 import torch
 from typing import Tuple
 from torch import Tensor
+from device_utils import get_device
 
 
 class ReplayBuffer:  # for off-policy
@@ -18,7 +19,8 @@ class ReplayBuffer:  # for off-policy
         self.add_item = None
         self.max_size = max_size
         self.num_seqs = num_seqs
-        self.device = torch.device(f"cuda:{gpu_id}" if (torch.cuda.is_available() and (gpu_id >= 0)) else "cpu")
+        # Use optimal device selection with MPS support
+        self.device = get_device(gpu_id=gpu_id, verbose=True)
 
         """The struction of ReplayBuffer (for example, num_seqs = num_workers * num_envs == 2*4 = 8
         ReplayBuffer:

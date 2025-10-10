@@ -7,7 +7,8 @@ from torch.nn.utils import clip_grad_norm_
 
 from erl_config import Config
 from erl_replay_buffer import ReplayBuffer
-from erl_net import QNetTwin, QNetTwinDuel 
+from erl_net import QNetTwin, QNetTwinDuel
+from device_utils import get_device 
 
 
 def get_optim_param(optimizer: torch.optim) -> list:  # backup
@@ -35,7 +36,8 @@ class AgentDoubleDQN:
         self.state_dim = state_dim
         self.action_dim = action_dim
         self.last_state = None  # last state of the trajectory for training. last_state.shape == (num_envs, state_dim)
-        self.device = torch.device(f"cuda:{gpu_id}" if (torch.cuda.is_available() and (gpu_id >= 0)) else "cpu")
+        # Use optimal device selection with MPS support
+        self.device = get_device(gpu_id=gpu_id, verbose=True)
 
         '''network'''
         act_class = getattr(self, "act_class", None)

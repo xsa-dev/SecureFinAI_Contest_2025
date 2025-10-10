@@ -8,6 +8,7 @@ from erl_evaluator import Evaluator
 from trade_simulator import TradeSimulator, EvalTradeSimulator
 from erl_agent import AgentD3QN, AgentDoubleDQN, AgentTwinD3QN
 from collections import Counter
+from device_utils import get_device, print_device_info
 from .metrics import *
 
 
@@ -70,7 +71,8 @@ class Ensemble:
         self.num_envs = 1
         self.state_dim = 2 + 8 + 2
         # gpu_id = 0
-        self.device = torch.device(f"cuda" if torch.cuda.is_available() else "cpu")
+        # Use optimal device selection with MPS support
+        self.device = get_device(gpu_id=-1, verbose=True)
         eval_env_class = args.eval_env_class
         eval_env_class.num_envs = 1
 
