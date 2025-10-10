@@ -1,0 +1,9 @@
+swig
+box2d
+git+https://github.com/AI4Finance-Foundation/FinRL.git
+stable-baselines3
+pandas
+numpy
+matplotlib
+scikit-learn
+yfinance

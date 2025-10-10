@@ -1,0 +1,20 @@
+[project]
+name = "finrl-contest-2023-task-1-baseline-solution"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "box2d>=2.3.10",
+    "finrl",
+    "matplotlib>=3.10.7",
+    "numpy<2.0",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "stable-baselines3[extra]>=2.7.0",
+    "swig>=4.3.1.post0",
+    "yfinance<0.2.66",
+]
+
+[tool.uv.sources]
+finrl = { git = "https://github.com/AI4Finance-Foundation/FinRL.git" }
