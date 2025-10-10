@@ -38,25 +38,22 @@ These question sets contain question-answer pairs collected and organized for ev
 
 #### SEC Filings Analysis
 
-| **Task** | **Dataset** | **Size** | **Metrics** | **Description** |
-| -------- | ----------- | -------- | ----------- | --------------- |
-| Financial Q&A | FinanceBench | 150 | BERTScore | Open-book financial Q&A on company filings based on OCR-processed annual reports. |
-| XBRL Tag Extraction | XBRL Analysis | 1k | Accuracy, F1-Score | Extract specific XBRL tags from raw XBRL text segments given natural language descriptions. |
-| XBRL Value Extraction | XBRL Analysis | 12k | Accuracy, F1-Score | Extract numeric values from XBRL text segments given natural language descriptions. |
-| XBRL Formula Construction | XBRL Analysis | 1k | Accuracy, F1-Score | Select relevant facts and tags from XBRL data and construct standard financial formulas. |
-| XBRL Formula Calculation | XBRL Analysis | 1k | Accuracy, F1-Score | Substitute actual values into constructed formulas and compute final results. |
-| General Mathematics | Math Problems | 1k | Accuracy | Solve general mathematical problems related to ratio calculation and algebra. |
-| Financial Mathematics | Financial Math | 1k | Accuracy | Answer questions about financial mathematics, such as NPV calculations and financial ratios. |
+| **Task** | **Dataset** | **Size** | **Metrics** | **Description** | **Source** |
+| -------- | ----------- | -------- | ----------- | --------------- | ----------|
+| Financial Q&A | FinanceBench | 150 | BERTScore | Open-book financial Q&A on company filings based on OCR-processed annual reports. | https://huggingface.co/datasets/PatronusAI/financebench |
+| XBRL Tag Extraction | XBRL Analysis | 1k | Accuracy, F1-Score | Extract specific XBRL tags from raw XBRL text segments given natural language descriptions. | https://huggingface.co/datasets/wangd12/XBRL_analysis |
+| XBRL Value Extraction | XBRL Analysis | 12k | Accuracy, F1-Score | Extract numeric values from XBRL text segments given natural language descriptions. | https://huggingface.co/datasets/wangd12/XBRL_analysis |
+| XBRL Formula Construction | XBRL Analysis | 1k | Accuracy, F1-Score | Select relevant facts and tags from XBRL data and construct standard financial formulas. | https://huggingface.co/datasets/wangd12/XBRL_analysis |
+| XBRL Formula Calculation | XBRL Analysis | 1k | Accuracy, F1-Score | Substitute actual values into constructed formulas and compute final results. | https://huggingface.co/datasets/wangd12/XBRL_analysis |
+| General Mathematics | Math Problems | 1k | Accuracy | Solve general mathematical problems related to ratio calculation and algebra. | https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/tree/main/Task_2_FinGPT_Powered_Compliance_Agents |
 
 #### Regulatory Compliance
 
-| **Task** | **Dataset** | **Size** | **Metrics** | **Description** |
-| -------- | ----------- | -------- | ----------- | --------------- |
-| Financial Data Retrieval | Real-time Data | 331 | Accuracy, F1-Score | Real-time retrieval from active web pages and open-domain search on company financials. |
-| Sentiment Analysis | Financial Sentiment | 4.8k | Accuracy, F1-Score | Aspect-specific sentiment classification for financial texts (news, social media, transcripts, ESG, macro). |
-| Antitrust and Copyright | Legal Analysis | 1.2k | Accuracy, F1-Score | Identify and reason over antitrust violations and copyright issues from legal filings or public disclosures. |
-| Patent and IP Protection | IP Analysis | 1.2k | Accuracy, F1-Score | Identify and reason over patent-related litigation facts, claim construction, and damages calculations. |
-| Financial Audio | FinAudio | 1k | Word Error Rate | Automatic speech recognition for financial audio content. |
+| **Task** | **Dataset** | **Size** | **Metrics** | **Description** | **Source**                  |
+| -------- | ----------- | -------- | ----------- | --------------- |-----------------------------|
+| Financial Data Retrieval | Real-time Data | 331 | Accuracy, F1-Score | Real-time retrieval from active web pages and open-domain search on company financials. | Yahoo Finance and Bloomberg |
+| Sentiment Analysis | Financial Sentiment | 4.8k | Accuracy, F1-Score | Aspect-specific sentiment classification for financial texts (news, social media, transcripts, ESG, macro). | BloombergGPT FPB, FiQA SA   |
+| Financial Audio | FinAudio | 1k | Word Error Rate | Automatic speech recognition for financial audio content. | ...                         |
 
 We will sample questions from the test split for each dataset for our evaluation.
 

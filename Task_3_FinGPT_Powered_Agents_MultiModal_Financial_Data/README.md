@@ -41,19 +41,12 @@ You may also enhance your agent by integrating external tools, such as a retriev
 
 These question sets contain question-answer pairs collected and organized for evaluating model capabilities across multilingual and multimodal financial tasks. These question sets are sampled from the test split of the datasets, which are used to benchmark your agent's performance. You **SHOULD NOT** use it or the entire test split for fine-tuning or training.
 
-#### Multilingual Financial Question Answering
-
-| **Task** | **Dataset** | **Size** | **Metrics** | **Description** |
-| -------- | ----------- | -------- | ----------- | --------------- |
-| Easy Multilingual QA | PolyFiQA-Easy | 2k | Accuracy, F1-Score | Multilingual financial question answering requiring basic reasoning over mixed-language inputs across English, Spanish, French, German, and Chinese. |
-| Expert Multilingual QA | PolyFiQA-Expert | 1k | Accuracy, F1-Score | Advanced multilingual financial question answering requiring complex reasoning over mixed-language inputs with domain-specific financial knowledge. |
-
 #### Visual-Text Financial Analysis
 
-| **Task** | **Dataset** | **Size** | **Metrics** | **Description** |
-| -------- | ----------- | -------- | ----------- | --------------- |
-| English OCR to HTML | EnglishOCR | 1.5k | ROUGE-1 | Convert English financial document images to structured HTML format (OCR + HTML generation task). |
-| Spanish OCR to HTML | SpanishOCR | 1.2k | ROUGE-1 | Convert Spanish financial document images to structured HTML format (OCR + HTML generation task). |
+| **Task** | **Dataset** | **Size** | **Metrics** | **Description** | **Source**                                                                           |
+| -------- | ----------- | -------- | ----------- | --------------- |--------------------------------------------------------------------------------------|
+| English OCR to HTML | EnglishOCR | 1.5k | ROUGE-1 | Convert English financial document images to structured HTML format (OCR + HTML generation task). | https://huggingface.co/datasets/TheFinAI/SecureFinAI_Contest_2025-Task_3_EnglishOCR  |
+| Spanish OCR to HTML | SpanishOCR | 1.2k | ROUGE-1 | Convert Spanish financial document images to structured HTML format (OCR + HTML generation task). | https://huggingface.co/datasets/TheFinAI/SecureFinAI_Contest_2025-Task_3_SpanishOCR  |
 
 We will sample questions from the test split for each dataset for our evaluation.
 
