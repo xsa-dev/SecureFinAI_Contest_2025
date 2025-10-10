@@ -135,7 +135,6 @@ def optimize_for_device(device: torch.device) -> None:
     """
     if device.type == "mps":
         # MPS-specific optimizations
-        torch.backends.mps.empty_cache()
         # Set memory fraction if needed (MPS doesn't support this directly)
         print("   🔧 Applied MPS optimizations")
     
