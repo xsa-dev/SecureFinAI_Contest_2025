@@ -23,7 +23,7 @@ weight: 5
 ## Local Organizers
 
 | Photo                | Biography              |
-|----------------------|-------------------|
+|----------------------|------------------------|
 | ![Nuo Chen](https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/organizers/Nuo_Chen.png?raw=true) | **Nuo Chen**, Ph.D. student in the School of Computing at the National University of Singapore, advised by Prof. Bingsheng He. His research interest lies in Large Language Model (LLM) engineering, particularly in unlocking their potential for practical applications (LLM as a judge & a researcher). His representative works include those on large reasoning models as a judge and diagnosing the crisis of AI conferences.|
 | ![Qian Wang](https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/organizers/Qian_Wang.png?raw=true) | **Qian Wang**, third-year Ph.D. candidate in Computer Science at the National University of Singapore, advised by Prof. Bingsheng He. Her research focuses on LLM-based Multi-Agent Systems, Trustworthy AI, and cryptocurrency-related applications. She has authored four first-author papers accepted by top conferences such as COLM, ACL, EMNLP, ICLR, and has received multiple academic awards, including the NUS Research Achievement Award and the Venture Initiation Program@SoC Grant.|
 
