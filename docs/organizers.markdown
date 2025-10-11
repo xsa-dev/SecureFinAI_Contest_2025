@@ -21,6 +21,7 @@ weight: 5
 | ![Xueqing Peng](https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/organizers/xueqing.png?raw=true) | **Xueqing Peng** (Task 3) Xueqing is a Postdoctoral Associate in the Department of Biomedical Informatics and Data Science, Yale School of Medicine. She received her Ph.D. from Fudan University. Her research focuses on natural language processing, large language models, and domain-specific AI, with applications in finance and biomedicine. She is particularly interested in multilingual and multimodal benchmarks, trustworthy LLM evaluation, and methods for analyzing scientific novelty and innovation. She also serves as a reviewer for Clinical and Experimental Medicine and JMIR Medical Informatics, and helped organize the FinNLP-FNP-LLMFinLegal workshop at COLING 2025.|
 
 ## Local Organizers
+
 | Photo                | Biography              |
 |----------------------|-------------------|
 | ![Nuo Chen](https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/blob/main/docs/assets/organizers/Nuo_Chen.png?raw=true) | **Nuo Chen**, Ph.D. student in the School of Computing at the National University of Singapore, advised by Prof. Bingsheng He. His research interest lies in Large Language Model (LLM) engineering, particularly in unlocking their potential for practical applications (LLM as a judge & a researcher). His representative works include those on large reasoning models as a judge and diagnosing the crisis of AI conferences.|
