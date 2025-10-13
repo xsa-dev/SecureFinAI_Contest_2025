@@ -53,7 +53,7 @@ These question sets contain question-answer pairs collected and organized for ev
 | -------- | ----------- | -------- | ----------- | --------------- |-----------------------------|
 | Financial Data Retrieval | Real-time Data | 331 | Accuracy, F1-Score | Real-time retrieval from active web pages and open-domain search on company financials. | Yahoo Finance and Bloomberg |
 | Sentiment Analysis | Financial Sentiment | 4.8k | Accuracy, F1-Score | Aspect-specific sentiment classification for financial texts (news, social media, transcripts, ESG, macro). | BloombergGPT FPB, FiQA SA   |
-| Financial Audio | FinAudio | 1k | Word Error Rate | Automatic speech recognition for financial audio content. | ...                         |
+| Financial Audio | FinAudio | 1k | Word Error Rate | Automatic speech recognition for financial audio content. | SPGISpeech                        |
 
 We will sample questions from the test split for each dataset for our evaluation.
 
@@ -103,7 +103,7 @@ For real-time financial data retrieval tasks, participants can utilize various f
 
 #### 🎵 4. Financial Audio Data
 
-For the FinAudio task, participants should collect financial audio content such as:
+For the FinAudio task, participants could collect financial audio content such as:
 
 - Earnings call recordings
 - Financial news broadcasts
@@ -165,4 +165,6 @@ To ensure fair comparison and practical deployment, it is recommended that the m
 [7] Haochen Sun, Jason Li, Hongyang Zhang. zkLLM: Zero Knowledge Proofs for Large Language Models. ACM SIGSAC Conference on Computer and Communications Security, 2024.
 
 [8] Xiao-Yang Liu, Ziyi Xia, Hongyang Yang, Jiechao Gao, Daochen Zha, Ming Zhu, Christina Dan Wang, Zhaoran Wang, Jian Guo. Dynamic datasets and market environments for financial reinforcement learning. Machine Learning - Nature, 2024.
+
+[9] Cao, Yupeng, et al. "FinAudio: A Benchmark for Audio Large Language Models in Financial Applications." arXiv preprint arXiv:2503.20990 (2025).
 
