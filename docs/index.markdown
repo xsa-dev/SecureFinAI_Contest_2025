@@ -76,6 +76,9 @@ This task focuses on developing FinGPT agents to process and analyze multimodal 
 <p style="font-size: 14px;">
 [8] Peng, Xueqing, et al. "MultiFinBen: A Multilingual, Multimodal, and Difficulty-Aware Benchmark for Financial LLM Evaluation." <em>arXiv preprint</em> arXiv:2506.14028 (2025). [<a href="https://arxiv.org/abs/2506.14028">arXiv</a>]
 </p>
+<p style="font-size: 14px;">
+[9] Cao, Yupeng, et al. "FinAudio: A Benchmark for Audio Large Language Models in Financial Applications." <em>arXiv preprint</em> arXiv preprint arXiv:2503.20990 (2025). [<a href="https://arxiv.org/pdf/2503.20990?">arXiv</a>]
+</p>
 
 
 ## Contact
