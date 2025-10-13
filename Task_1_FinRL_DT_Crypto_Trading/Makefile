@@ -15,6 +15,7 @@ help:
 	@echo ""
 	@echo "Data Preparation (Step 1-2):"
 	@echo "  prepare-data     Generate Alpha101 technical factors from BTC data"
+	@echo "  create-test-split Create train/test data split (20% test)"
 	@echo "  train-factors    Train RNN models to aggregate factor sequences"
 	@echo ""
 	@echo "RL Training (Step 3-4):"
@@ -43,6 +44,7 @@ help:
 	@echo ""
 	@echo "Individual Steps:"
 	@echo "  step1            Generate Alpha101 factors"
+	@echo "  step1.5          Create train/test data split"
 	@echo "  step2            Train RNN factor aggregation"
 	@echo "  step3            Train single RL agent"
 	@echo "  step4            Train ensemble RL agents"
@@ -79,6 +81,11 @@ check-dependencies:
 	else \
 		echo "  ❌ BTC training data missing - run 'make download-data'"; \
 	fi
+	@if [ -f "offline_data_preparation/data/BTC_1sec_with_sentiment_risk_test.csv" ]; then \
+		echo "  ✅ BTC test data found"; \
+	else \
+		echo "  ❌ BTC test data missing - run 'make create-test-split'"; \
+	fi
 	@if [ -f "offline_data_preparation/data/FinRL_BTC_news_signals.csv" ]; then \
 		echo "  ✅ News data found"; \
 	else \
@@ -91,7 +98,7 @@ check-dependencies:
 		echo "  ❌ Alpha101 factors missing - run 'make prepare-data'"; \
 	fi
 	@echo "Step 3-4 - RL training:"
-	@if [ -f "offline_data_preparation/TradeSimulator-v0_D3QN_0/replay_buffer_states.pth" ]; then \
+	@if [ -f "offline_data_preparation/TradeSimulator-v0_D3QN_-1/replay_buffer_states.pth" ]; then \
 		echo "  ✅ RL training output found"; \
 	else \
 		echo "  ❌ RL training output missing - run 'make train-ensemble'"; \
@@ -130,6 +137,15 @@ prepare-data:
 	cd offline_data_preparation && uv run python seq_data.py
 	@echo "Alpha101 factors generated!"
 
+create-test-split:
+	@echo "Step 1.5: Creating train/test data split..."
+	@if [ ! -f "offline_data_preparation/data/BTC_1sec_with_sentiment_risk_train.csv" ]; then \
+		echo "❌ Training data not found. Please run 'make download-data' first."; \
+		exit 1; \
+	fi
+	uv run python create_test_split.py --input_file offline_data_preparation/data/BTC_1sec_with_sentiment_risk_train.csv --output_dir offline_data_preparation/data --test_size 0.2
+	@echo "Test data split created!"
+
 train-factors:
 	@echo "Step 2: Training RNN models to aggregate factor sequences..."
 	@if [ ! -f "offline_data_preparation/data/BTC_1sec_input.npy" ] || [ ! -f "offline_data_preparation/data/BTC_1sec_label.npy" ]; then \
@@ -152,11 +168,11 @@ train-ensemble:
 
 convert-traj:
 	@echo "Step 5: Converting RL replay buffers to DT trajectories..."
-	@if [ ! -f "offline_data_preparation/TradeSimulator-v0_D3QN_0/replay_buffer_states.pth" ]; then \
+	@if [ ! -f "offline_data_preparation/TradeSimulator-v0_D3QN_-1/replay_buffer_states.pth" ]; then \
 		echo "❌ RL training files not found. Please run 'make train-ensemble' first."; \
 		exit 1; \
 	fi
-	cd offline_data_preparation && uv run python convert_replay_buffer_to_trajectories.py --replay_buffer_dir ./TradeSimulator-v0_D3QN_0 --output_file ../crypto_trajectories.csv
+	cd offline_data_preparation && uv run python convert_replay_buffer_to_trajectories.py --replay_buffer_dir ./TradeSimulator-v0_D3QN_-1 --output_file ../crypto_trajectories.csv
 	@echo "Trajectory conversion completed!"
 
 # Decision Transformer (Step 5-6)
@@ -171,6 +187,10 @@ train-dt:
 
 evaluate-dt:
 	@echo "Evaluating Decision Transformer model..."
+	@if [ ! -f "offline_data_preparation/data/BTC_1sec_with_sentiment_risk_test.csv" ]; then \
+		echo "❌ Test data not found. Please run 'make create-test-split' first."; \
+		exit 1; \
+	fi
 	uv run python evaluation.py --model_path ./trained_models/decision_transformer.pth --test_data_path ./offline_data_preparation/data/BTC_1sec_with_sentiment_risk_test.csv --max_samples 35000 --target_return 250.0 --context_length 20 --plots_dir plots
 	@echo "Decision Transformer evaluation completed!"
 
@@ -235,7 +255,7 @@ status:
 	@ls -la offline_data_preparation/data/ 2>/dev/null || true
 
 # Complete workflow
-workflow: install setup-data prepare-data train-factors train-ensemble convert-traj train-dt evaluate-dt
+workflow: install setup-data create-test-split prepare-data train-factors train-ensemble convert-traj train-dt evaluate-dt
 	@echo "Complete workflow finished! Check results in plots/ directory."
 
 # Quick development commands
@@ -247,6 +267,7 @@ quick-train: check-data train-dt
 
 # Individual step commands
 step1: prepare-data
+step1.5: create-test-split
 step2: train-factors
 step3: train-rl
 step4: train-ensemble
