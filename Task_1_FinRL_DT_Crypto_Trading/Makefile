@@ -29,6 +29,7 @@ help:
 	@echo "Data Management:"
 	@echo "  clean-data       Clean downloaded data files"
 	@echo "  check-data       Verify data integrity and structure"
+	@echo "  check-dependencies Check workflow dependencies"
 	@echo ""
 	@echo "Development:"
 	@echo "  format           Format code using black and isort"
@@ -70,6 +71,44 @@ clean-data:
 	rm -f offline_data_preparation/data/FinRL_BTC_news_signals.csv
 	@echo "Data files cleaned!"
 
+check-dependencies:
+	@echo "Checking workflow dependencies..."
+	@echo "Step 1 - Data preparation:"
+	@if [ -f "offline_data_preparation/data/BTC_1sec_with_sentiment_risk_train.csv" ]; then \
+		echo "  ✅ BTC training data found"; \
+	else \
+		echo "  ❌ BTC training data missing - run 'make download-data'"; \
+	fi
+	@if [ -f "offline_data_preparation/data/FinRL_BTC_news_signals.csv" ]; then \
+		echo "  ✅ News data found"; \
+	else \
+		echo "  ❌ News data missing - run 'make download-data'"; \
+	fi
+	@echo "Step 2 - Alpha101 factors:"
+	@if [ -f "offline_data_preparation/data/BTC_1sec_input.npy" ] && [ -f "offline_data_preparation/data/BTC_1sec_label.npy" ]; then \
+		echo "  ✅ Alpha101 factors found"; \
+	else \
+		echo "  ❌ Alpha101 factors missing - run 'make prepare-data'"; \
+	fi
+	@echo "Step 3-4 - RL training:"
+	@if [ -f "offline_data_preparation/TradeSimulator-v0_D3QN_0/replay_buffer_states.pth" ]; then \
+		echo "  ✅ RL training output found"; \
+	else \
+		echo "  ❌ RL training output missing - run 'make train-ensemble'"; \
+	fi
+	@echo "Step 5 - Trajectories:"
+	@if [ -f "crypto_trajectories.csv" ]; then \
+		echo "  ✅ Trajectory data found"; \
+	else \
+		echo "  ❌ Trajectory data missing - run 'make convert-traj'"; \
+	fi
+	@echo "Step 6 - Decision Transformer:"
+	@if [ -f "trained_models/decision_transformer.pth" ]; then \
+		echo "  ✅ Decision Transformer model found"; \
+	else \
+		echo "  ❌ Decision Transformer model missing - run 'make train-dt'"; \
+	fi
+
 check-data:
 	@echo "Checking data integrity..."
 	@if [ -f "offline_data_preparation/data/FinRL_BTC_news_signals.csv" ]; then \
@@ -93,28 +132,40 @@ prepare-data:
 
 train-factors:
 	@echo "Step 2: Training RNN models to aggregate factor sequences..."
+	@if [ ! -f "offline_data_preparation/data/BTC_1sec_input.npy" ] || [ ! -f "offline_data_preparation/data/BTC_1sec_label.npy" ]; then \
+		echo "❌ Alpha101 factors not found. Please run 'make prepare-data' first."; \
+		exit 1; \
+	fi
 	cd offline_data_preparation && uv run python seq_run.py 0
 	@echo "RNN factor aggregation training completed!"
 
 # RL Training (Step 3-4)
 train-rl:
 	@echo "Step 3: Training single RL agent..."
-	cd offline_data_preparation && uv run python erl_run.py -1
+	cd offline_data_preparation && uv run python erl_run.py 0
 	@echo "Single RL agent training completed!"
 
 train-ensemble:
 	@echo "Step 4: Training ensemble RL agents..."
-	cd offline_data_preparation && uv run python task1_ensemble.py -1
+	cd offline_data_preparation && uv run python task1_ensemble.py 0
 	@echo "Ensemble RL training completed!"
 
 convert-traj:
 	@echo "Step 5: Converting RL replay buffers to DT trajectories..."
+	@if [ ! -f "offline_data_preparation/TradeSimulator-v0_D3QN_0/replay_buffer_states.pth" ]; then \
+		echo "❌ RL training files not found. Please run 'make train-ensemble' first."; \
+		exit 1; \
+	fi
 	cd offline_data_preparation && uv run python convert_replay_buffer_to_trajectories.py --replay_buffer_dir ./TradeSimulator-v0_D3QN_0 --output_file ../crypto_trajectories.csv
 	@echo "Trajectory conversion completed!"
 
 # Decision Transformer (Step 5-6)
 train-dt:
 	@echo "Step 6: Training Decision Transformer model..."
+	@if [ ! -f "crypto_trajectories.csv" ]; then \
+		echo "❌ Trajectory data not found. Please run 'make convert-traj' first."; \
+		exit 1; \
+	fi
 	uv run python dt_crypto.py --epochs 100 --lr 1e-3 --context_length 20 --model_path ./trained_models/decision_transformer.pth --plots_dir plots
 	@echo "Decision Transformer training completed!"
 
