@@ -46,6 +46,11 @@ These question sets contain question-answer pairs collected and organized for ev
 | XBRL Formula Construction | XBRL Analysis | 1k | Accuracy, F1-Score | Select relevant facts and tags from XBRL data and construct standard financial formulas. | https://huggingface.co/datasets/wangd12/XBRL_analysis |
 | XBRL Formula Calculation | XBRL Analysis | 1k | Accuracy, F1-Score | Substitute actual values into constructed formulas and compute final results. | https://huggingface.co/datasets/wangd12/XBRL_analysis |
 | General Mathematics | Math Problems | 1k | Accuracy | Solve general mathematical problems related to ratio calculation and algebra. | https://github.com/Open-Finance-Lab/SecureFinAI_Contest_2025/tree/main/Task_2_FinGPT_Powered_Compliance_Agents |
+| Numerical Entity Identification | FinNI | TBD | Accuracy, F1-Score | Identify and extract numerical entities from 10K annual reports for financial analysis. | https://github.com/The-FinAI/FinTagging |
+| Concept Mapping/Tagging | FinCL | TBD | Accuracy, F1-Score | Map financial concepts to appropriate tags using retrieval+rerank or classification approaches on 10K annual reports. | https://github.com/The-FinAI/FinTagging |
+| Semantic Inconsistency Detection | FinSM | TBD | Precision@K, Recall@K | Detect semantic inconsistencies in XBRL filings through information retrieval methods. | https://github.com/The-FinAI/FinAuditing |
+| Relation Inconsistency Detection | FinRE | TBD | Accuracy, F1-Score | Classify relation error types (Reversal, Inappropriateness, CombinationErr) in XBRL filings. | https://github.com/The-FinAI/FinAuditing |
+| Mathematical Reasoning | FinMR | TBD | Accuracy | Extract XBRL report element values and calculate true values through mathematical reasoning. | https://github.com/The-FinAI/FinAuditing |
 
 #### Regulatory Compliance
 
@@ -109,6 +114,31 @@ For the FinAudio task, participants could collect financial audio content such a
 - Financial news broadcasts
 - Investor presentations
 - Financial podcasts
+
+#### 📊 5. FinTagging Data
+
+For the FinTagging tasks (FinNI and FinCL), participants can access the datasets from:
+
+- **Data Source**: 10K Annual Reports
+- **Repository**: https://github.com/The-FinAI/FinTagging
+- **Training Data**: Use the trainset for model training
+- **Test Data**: Use the subset for challenge evaluation
+- **Tasks**:
+  - **FinNI**: Numerical entity identification from financial documents
+  - **FinCL**: Concept mapping/tagging with retrieval+rerank or classification approaches
+- **Taxonomy**: US-GAAP taxonomy provided for concept mapping tasks
+
+#### 🔍 6. FinAuditing Data
+
+For the FinAuditing tasks (FinSM, FinRE, FinMR), participants can access the datasets from:
+
+- **Data Source**: XBRL Filing documents
+- **Repository**: https://github.com/The-FinAI/FinAuditing
+- **Tasks**:
+  - **FinSM**: Semantic inconsistency detection using retrieval methods
+  - **FinRE**: Relation inconsistency detection with three-class classification (Reversal, Inappropriateness, CombinationErr)
+  - **FinMR**: Mathematical reasoning for XBRL element value extraction and calculation
+- **Subsets**: Each task provides dedicated subsets for ICAIF 2025 challenge evaluation
 
 ---
 
