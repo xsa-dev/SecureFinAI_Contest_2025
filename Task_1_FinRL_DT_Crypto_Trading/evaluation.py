@@ -256,7 +256,7 @@ class CryptoEvaluator:
             for t in range(len(self.processed_states)):
                 current_state = self.processed_states[t]
                 current_price = self.prices[t]
-                current_time = self.timestamps[t]
+                current_time = self.timestamps[t] if t < len(self.timestamps) else None
                 
                 discrete_action = 1  # Default to hold
                 
@@ -476,8 +476,20 @@ class CryptoEvaluator:
         trading_results = self.simulate_trading()
         
         # Get benchmark data n
-        start_date = self.timestamps[0].date()
-        end_date = self.timestamps[-1].date()
+        print(f"Debug: timestamps type: {type(self.timestamps)}, length: {len(self.timestamps) if hasattr(self.timestamps, '__len__') else 'no length'}")
+        try:
+            if len(self.timestamps) == 0:
+                print("Warning: No timestamps available, using default date range")
+                start_date = datetime(2021, 4, 7).date()
+                end_date = datetime(2021, 4, 8).date()
+            else:
+                start_date = self.timestamps[0].date()
+                end_date = self.timestamps[-1].date()
+        except Exception as e:
+            print(f"Error accessing timestamps: {e}")
+            print("Using default date range")
+            start_date = datetime(2021, 4, 7).date()
+            end_date = datetime(2021, 4, 8).date()
         
         try:
             benchmark_data, benchmark_name = self._fetch_benchmark_data(start_date, end_date)
