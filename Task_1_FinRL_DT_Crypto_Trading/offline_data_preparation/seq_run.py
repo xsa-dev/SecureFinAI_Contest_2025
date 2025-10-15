@@ -7,6 +7,7 @@ from torch.nn.utils import clip_grad_norm_
 from typing import Optional
 
 from seq_data import ConfigData, convert_btc_csv_to_btc_npy
+from device_utils import get_device, print_device_info
 
 TEN = th.Tensor
 
@@ -62,7 +63,8 @@ def _update_network(optimizer, obj, clip_grad_norm):
 
 
 def train_model(gpu_id: int):
-    device = th.device(f"cuda:{gpu_id}" if (th.cuda.is_available() and (gpu_id >= 0)) else "cpu")
+    # Use optimal device selection with MPS support
+    device = get_device(gpu_id=gpu_id, verbose=True)
 
     '''Config for training'''
     # Video memory usage, model parameters
@@ -165,7 +167,8 @@ def train_model(gpu_id: int):
 
 
 def valid_model(gpu_id: int):
-    device = th.device(f"cuda:{gpu_id}" if (th.cuda.is_available() and (gpu_id >= 0)) else "cpu")
+    # Use optimal device selection with MPS support
+    device = get_device(gpu_id=gpu_id, verbose=True)
     th.set_grad_enabled(False)
 
     '''Config for training'''

@@ -20,6 +20,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 from dt_crypto import parse_array, preprocess_raw_btc_data, CryptoDataset
+from device_utils import get_device, print_device_info
 
 
 class CryptoEvaluator:
@@ -43,7 +44,8 @@ class CryptoEvaluator:
         self.max_samples = max_samples
         self.target_return = target_return
         self.context_length = context_length
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # Use optimal device selection with MPS support
+        self.device = get_device(gpu_id=-1, verbose=True)
         
         self._load_model_config()
         
