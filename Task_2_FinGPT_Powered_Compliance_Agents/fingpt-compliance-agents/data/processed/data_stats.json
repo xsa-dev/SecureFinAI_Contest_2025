@@ -1,0 +1,13 @@
+{
+  "total_examples": 4223,
+  "train_examples": 3378,
+  "test_examples": 845,
+  "tasks": [
+    "sentiment_analysis",
+    "financial_qa"
+  ],
+  "sources": [
+    "sentiment_dataset",
+    "financebench"
+  ]
+}
