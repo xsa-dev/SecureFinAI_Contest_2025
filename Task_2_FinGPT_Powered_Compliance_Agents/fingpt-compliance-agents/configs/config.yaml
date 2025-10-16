@@ -37,16 +37,16 @@ lora:
 # Training configuration
 training:
   batch_size: 1
-  gradient_accumulation_steps: 8
+  gradient_accumulation_steps: 4
   learning_rate: 1e-4
-  num_epochs: 3
-  warmup_steps: 100
-  save_steps: 500
-  eval_steps: 500
+  num_epochs: 1
+  warmup_steps: 50
+  save_steps: 1000
+  eval_steps: 1000
 
 # Data processing
 data_processing:
-  max_text_length: 1024
+  max_text_length: 256
   audio_sample_rate: 16000
   audio_max_duration: 30  # seconds
 

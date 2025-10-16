@@ -127,6 +127,35 @@ class DataProcessor:
         logger.info(f"Processed {len(processed_data)} XBRL examples")
         return processed_data
     
+    def process_xbrl_training_data(self, input_file: str) -> List[Dict]:
+        """Process XBRL training data from collected specifications"""
+        logger.info(f"Processing XBRL training data from {input_file}")
+        
+        processed_data = []
+        
+        with open(input_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                try:
+                    data = json.loads(line.strip())
+                    
+                    # Create training example for XBRL tasks
+                    if 'instruction' in data and 'input' in data and 'output' in data:
+                        example = {
+                            'instruction': data.get('instruction', ''),
+                            'input': data.get('input', ''),
+                            'output': data.get('output', ''),
+                            'task': data.get('task', 'xbrl_extraction'),
+                            'source': data.get('source', 'xbrl_specifications')
+                        }
+                        
+                        processed_data.append(example)
+                
+                except json.JSONDecodeError:
+                    continue
+        
+        logger.info(f"Processed {len(processed_data)} XBRL training examples")
+        return processed_data
+    
     def process_sec_filings_data(self, input_file: str) -> List[Dict]:
         """Process SEC filings data"""
         logger.info(f"Processing SEC filings data from {input_file}")
@@ -229,6 +258,7 @@ class DataProcessor:
             ('financebench', self.process_financial_qa_data),
             ('sentiment', self.process_sentiment_data),
             ('xbrl', self.process_xbrl_data),
+            ('xbrl_training', self.process_xbrl_training_data),
             ('sec_filings', self.process_sec_filings_data)
         ]
         

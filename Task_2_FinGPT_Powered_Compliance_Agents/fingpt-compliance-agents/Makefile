@@ -17,6 +17,7 @@ help:
 	@echo "  data-sec       - Collect SEC EDGAR data only"
 	@echo "  data-hf        - Collect Hugging Face datasets only"
 	@echo "  data-audio     - Collect financial audio data"
+	@echo "  data-xbrl      - Collect XBRL specifications and documentation"
 	@echo ""
 	@echo "Data Processing:"
 	@echo "  data-process   - Process and prepare all collected data"
@@ -26,17 +27,20 @@ help:
 	@echo "  train          - Train the FinGPT compliance model"
 	@echo "  train-lora     - Train with LoRA fine-tuning only"
 	@echo "  train-rl       - Train with reinforcement learning"
+	@echo "  train-and-evaluate - Train model and then evaluate it"
 	@echo ""
 	@echo "Evaluation & Testing:"
-	@echo "  evaluate       - Evaluate model on all tasks"
+	@echo "  evaluate       - Evaluate model on all tasks (requires trained model)"
 	@echo "  test-audio     - Test audio processing capabilities"
 	@echo "  test-whisper   - Test Cloud.ru Whisper API connection"
 	@echo "  test-whisper-openai - Test OpenAI Whisper API connection"
 	@echo "  benchmark      - Run full benchmark suite"
 	@echo ""
-	@echo "Submission:"
+	@echo "Submission & Deployment:"
 	@echo "  prepare-submission - Prepare model for Hugging Face submission"
 	@echo "  package        - Create submission package"
+	@echo "  upload-hf      - Upload model to Hugging Face Hub"
+	@echo "  deploy-cloud   - Deploy model to cloud platforms"
 	@echo ""
 	@echo "Utilities:"
 	@echo "  clean          - Clean temporary files and caches"
@@ -75,7 +79,7 @@ install-dev: install
 	@echo "Development dependencies installed!"
 
 # Data Collection
-data-collect: data-hf data-sec data-audio
+data-collect: data-hf data-sec data-audio data-xbrl
 	@echo "All data collection completed!"
 
 data-hf:
@@ -92,6 +96,11 @@ data-audio:
 	@echo "Collecting financial audio data..."
 	@$(PYTHON) src/data_collection/audio_data_collector.py
 	@echo "Financial audio data collected!"
+
+data-xbrl:
+	@echo "Collecting XBRL specifications and documentation..."
+	@$(PYTHON) src/data_collection/xbrl_data_collector.py --max-pages 30
+	@echo "XBRL data collected!"
 
 # Data Processing
 data-process:
@@ -121,10 +130,13 @@ train-rl: train-lora
 	@echo "Reinforcement learning training completed!"
 
 # Evaluation and Testing
-evaluate: train
+evaluate:
 	@echo "Evaluating model performance..."
 	@$(PYTHON) src/evaluation/evaluator.py --config $(CONFIG_FILE)
 	@echo "Model evaluation completed!"
+
+train-and-evaluate: train evaluate
+	@echo "Training and evaluation completed!"
 
 test-audio:
 	@echo "Testing audio processing capabilities..."
@@ -156,6 +168,17 @@ package: prepare-submission
 	@echo "Creating submission package..."
 	@$(PYTHON) src/submission/package_model.py --config $(CONFIG_FILE)
 	@echo "Submission package created!"
+
+upload-hf: prepare-submission
+	@echo "Uploading model to Hugging Face Hub..."
+	@$(PYTHON) upload_to_huggingface.py --model-path ./models/fingpt-compliance
+	@echo "Model uploaded to Hugging Face Hub!"
+
+deploy-cloud: upload-hf
+	@echo "Deploying model to cloud platforms..."
+	@echo "Model is now available on Hugging Face Hub"
+	@echo "See DEPLOYMENT_PLAN.md for additional cloud deployment options"
+	@echo "Cloud deployment completed!"
 
 # Utilities
 clean:
