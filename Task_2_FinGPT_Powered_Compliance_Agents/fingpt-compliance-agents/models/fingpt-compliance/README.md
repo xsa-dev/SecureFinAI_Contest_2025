@@ -104,8 +104,8 @@ base_model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.float16,
     device_map="auto"
 )
-model = PeftModel.from_pretrained(base_model, "fingpt-compliance-agents")
-tokenizer = AutoTokenizer.from_pretrained("fingpt-compliance-agents")
+model = PeftModel.from_pretrained(base_model, "QXPS/fingpt-compliance-agents")
+tokenizer = AutoTokenizer.from_pretrained("QXPS/fingpt-compliance-agents")
 
 # Generate response
 def generate_response(prompt, max_length=512):
@@ -290,12 +290,12 @@ The model shows strong performance in XBRL processing tasks (88.3% accuracy) and
   author={SecureFinAI Contest 2025 Team},
   year={2025},
   publisher={Hugging Face},
-  howpublished={\url{https://huggingface.co/your-username/fingpt-compliance-agents}}
+  howpublished={\url{https://huggingface.co/QXPS/fingpt-compliance-agents}}
 }
 ```
 
 **APA:**
-SecureFinAI Contest 2025 Team. (2025). FinGPT Compliance Agents: A Specialized Language Model for Financial Compliance. Hugging Face. https://huggingface.co/your-username/fingpt-compliance-agents
+SecureFinAI Contest 2025 Team. (2025). FinGPT Compliance Agents: A Specialized Language Model for Financial Compliance. Hugging Face. https://huggingface.co/QXPS/fingpt-compliance-agents
 
 ## Glossary
 
@@ -315,7 +315,7 @@ SecureFinAI Contest 2025 Team. (2025). FinGPT Compliance Agents: A Specialized L
 
 For questions about this model:
 - **GitHub Issues**: [Repository Issues](https://github.com/your-repo/fingpt-compliance-agents/issues)
-- **Hugging Face**: [Model Discussion](https://huggingface.co/your-username/fingpt-compliance-agents/discussions)
+- **Hugging Face**: [Model Discussion](https://huggingface.co/QXPS/fingpt-compliance-agents/discussions)
 
 ### Framework versions
 

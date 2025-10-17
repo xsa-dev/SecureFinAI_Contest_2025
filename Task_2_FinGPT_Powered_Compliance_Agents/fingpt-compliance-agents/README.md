@@ -12,7 +12,7 @@ This project implements FinGPT-powered compliance agents capable of handling:
 
 ## 🤗 Hugging Face Model
 
-**Model Hub**: [fingpt-compliance-agents](https://huggingface.co/your-username/fingpt-compliance-agents)
+**Model Hub**: [fingpt-compliance-agents](https://huggingface.co/QXPS/fingpt-compliance-agents)
 
 The trained model is available on Hugging Face Hub with:
 - ✅ Pre-trained LoRA weights
@@ -28,8 +28,8 @@ from peft import PeftModel
 
 # Load the model directly from Hugging Face
 base_model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B-Instruct")
-model = PeftModel.from_pretrained(base_model, "your-username/fingpt-compliance-agents")
-tokenizer = AutoTokenizer.from_pretrained("your-username/fingpt-compliance-agents")
+model = PeftModel.from_pretrained(base_model, "QXPS/fingpt-compliance-agents")
+tokenizer = AutoTokenizer.from_pretrained("QXPS/fingpt-compliance-agents")
 
 # Use the model
 prompt = "Analyze the sentiment of this financial news: 'Company X reported strong quarterly earnings.'"
@@ -257,7 +257,7 @@ uv run python src/evaluation/evaluator.py
 
 ### Hugging Face Hub
 The model is available on Hugging Face Hub:
-- **Model**: [fingpt-compliance-agents](https://huggingface.co/your-username/fingpt-compliance-agents)
+- **Model**: [fingpt-compliance-agents](https://huggingface.co/QXPS/fingpt-compliance-agents)
 - **Status**: Ready for production use
 - **Documentation**: Complete model card with performance metrics
 

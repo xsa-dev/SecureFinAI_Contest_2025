@@ -26,7 +26,7 @@ This document outlines the deployment strategy for FinGPT Compliance Agents, inc
 ### 1. Hugging Face Hub (Primary)
 
 **Status**: Ready for deployment
-**Repository**: `your-username/fingpt-compliance-agents`
+**Repository**: `QXPS/fingpt-compliance-agents`
 
 #### Steps:
 1. **Create Hugging Face Repository**
@@ -44,11 +44,11 @@ This document outlines the deployment strategy for FinGPT Compliance Agents, inc
 2. **Upload Model Files**
    ```bash
    # Upload all model files
-   huggingface-cli upload your-username/fingpt-compliance-agents ./models/fingpt-compliance/
+   huggingface-cli upload QXPS/fingpt-compliance-agents ./models/fingpt-compliance/
    
    # Upload supporting files
-   huggingface-cli upload your-username/fingpt-compliance-agents ./README.md
-   huggingface-cli upload your-username/fingpt-compliance-agents ./requirements.txt
+   huggingface-cli upload QXPS/fingpt-compliance-agents ./README.md
+   huggingface-cli upload QXPS/fingpt-compliance-agents ./requirements.txt
    ```
 
 3. **Set Repository Settings**
@@ -62,7 +62,7 @@ This document outlines the deployment strategy for FinGPT Compliance Agents, inc
 ```python
 from huggingface_hub import InferenceClient
 
-client = InferenceClient("your-username/fingpt-compliance-agents")
+client = InferenceClient("QXPS/fingpt-compliance-agents")
 response = client.text_generation(
     "Analyze this financial statement: ...",
     max_new_tokens=512,
@@ -164,8 +164,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
 base_model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B-Instruct")
-model = PeftModel.from_pretrained(base_model, "your-username/fingpt-compliance-agents")
-tokenizer = AutoTokenizer.from_pretrained("your-username/fingpt-compliance-agents")
+model = PeftModel.from_pretrained(base_model, "QXPS/fingpt-compliance-agents")
+tokenizer = AutoTokenizer.from_pretrained("QXPS/fingpt-compliance-agents")
 
 # Use model
 def analyze_financial_text(text):
@@ -181,7 +181,7 @@ def analyze_financial_text(text):
 import requests
 
 # API endpoint
-url = "https://api-inference.huggingface.co/models/your-username/fingpt-compliance-agents"
+url = "https://api-inference.huggingface.co/models/QXPS/fingpt-compliance-agents"
 headers = {"Authorization": f"Bearer {hf_token}"}
 
 def query_model(payload):
@@ -208,8 +208,8 @@ st.title("FinGPT Compliance Agents")
 @st.cache_resource
 def load_model():
     base_model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B-Instruct")
-    model = PeftModel.from_pretrained(base_model, "your-username/fingpt-compliance-agents")
-    tokenizer = AutoTokenizer.from_pretrained("your-username/fingpt-compliance-agents")
+    model = PeftModel.from_pretrained(base_model, "QXPS/fingpt-compliance-agents")
+    tokenizer = AutoTokenizer.from_pretrained("QXPS/fingpt-compliance-agents")
     return model, tokenizer
 
 model, tokenizer = load_model()
@@ -351,7 +351,7 @@ def test_performance():
 ## 📞 Support
 
 - **GitHub Issues**: [Repository Issues](https://github.com/your-repo/fingpt-compliance-agents/issues)
-- **Hugging Face**: [Model Discussion](https://huggingface.co/your-username/fingpt-compliance-agents/discussions)
+- **Hugging Face**: [Model Discussion](https://huggingface.co/QXPS/fingpt-compliance-agents/discussions)
 - **Email**: support@your-domain.com
 
 ---

@@ -153,8 +153,8 @@ fingpt-compliance-agents/
    from peft import PeftModel
    
    base_model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B-Instruct")
-   model = PeftModel.from_pretrained(base_model, "your-username/fingpt-compliance-agents")
-   tokenizer = AutoTokenizer.from_pretrained("your-username/fingpt-compliance-agents")
+   model = PeftModel.from_pretrained(base_model, "QXPS/fingpt-compliance-agents")
+   tokenizer = AutoTokenizer.from_pretrained("QXPS/fingpt-compliance-agents")
    ```
 
 3. **Deploy to Cloud Platform**
@@ -204,7 +204,7 @@ fingpt-compliance-agents/
 
 ### Community
 - **GitHub**: [Repository Issues](https://github.com/your-repo/fingpt-compliance-agents/issues)
-- **Hugging Face**: [Model Discussions](https://huggingface.co/your-username/fingpt-compliance-agents/discussions)
+- **Hugging Face**: [Model Discussions](https://huggingface.co/QXPS/fingpt-compliance-agents/discussions)
 - **Email**: support@your-domain.com
 
 ### Quick Start
